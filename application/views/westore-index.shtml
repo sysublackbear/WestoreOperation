@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>O2O微店平台，让交易便捷起来</title>
+<link rel="stylesheet" href="<?=base_url("/static/css/global_min.css")?>" />
+<link rel="shortcut icon" href="<?=base_url("/static/core/favicon.ico")?>" type="image/x-icon"/>
+</head>
+
+<body class="index">
+
+<?php require_once("/template/header.shtml"); ?>
+
+<!-- 登录 S -->
+<div class="banner">
+    <div class="wrap">
+        <div class="login">
+            <h2>登录</h2>
+            <div class="tips-error"><i class="ico-error"></i><p id="errmsg" style="color: red"><?php if(isset($error)){echo $error;}?></p></div>
+            <!-- 交互说明
+                 1. 给样式"login-form"添加样式"login-account-on",显示账号获焦效果
+                 2. 给样式"login-form"添加样式"login-password-on",显示密码获焦效果
+            -->
+            <form class="login-form">
+                <div class="login-mainly">   
+                    <div class="login-account"><label class="ico-account" for="">邮箱/微信号/QQ号</label><input type="text" name="username" placeholder="邮箱/微信号/QQ号"></div>
+                    <div class="login-password"><label class="ico-password " for="">密码</label><input type="password" name="password" placeholder="密码"></div>
+                </div>
+                <!--<div class="login-verify"><input type="text" placeholder="验证码"><img class="img-verify" src="#"><a class="change-verify" href="#">换一张</a></div>-->
+            </form>
+            <div class="login-memory"><label class="memory-account" for=""><i class="cbx" id="memory_username"></i>记住帐号</label><a class="forget-password" href="#">无法登录？</a></div>
+            <a class="btn-login"  id="do_login" name="do_login" href="#">登录</a>
+        </div>
+          <div class="qrcode"><img src="<?=base_url("/static/img/qrcode.png")?>">扫描并关注<br>O2O微店平台</div>
+      </div>
+</div>
+<!-- 登录 E -->
+
+<!-- 内容 S -->
+<div class="container">
+    <div class="wrap">
+        
+        <!-- 最新公告 S -->
+        <div class="list notice">
+            <div class="list-hd">
+                <h2>最新公告</h2>
+                <p><a href="#">更多>></a></p>
+            </div>
+            <div class="list-bd">
+                <ul>
+                    <li><a href="#">商户管理平台新增投票和多客服功能<i class="ico-new"></i></a></li>
+                    <li><a href="#">公众平台回复用户消息时限变更通知</a></li>
+                    <li><a href="#">微信公众平台关于诱导分享行为的公告</a></li>
+                    <li><a href="#">微信公众平台新版公测更新说明</a></li>
+                    <li><a href="#">微信公众平台增加数据统计功能</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 最新公告 E -->
+        
+        <!-- 常用功能 S -->
+        <div class="list function">
+            <div class="list-hd">
+                <h2>常用功能</h2>
+                <p><a href="#">更多>></a></p>
+            </div>
+            <div class="list-bd">
+                <ul>
+                    <li><a href="#">交易管理</a></li>
+                    <li><a href="#">结算管理</a></li>
+                    <li><a href="#">资金管理</a></li>
+                    <li><a href="#">营销管理</a></li>
+                    <li><a href="#">微信支付安全证书</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 常用功能 E -->
+        
+        <!-- 问题帮助 S -->
+        <div class="list question">
+            <div class="list-hd">
+                <h2>问题帮助</h2>
+                <p><a href="#">更多>></a></p>
+            </div>
+            <div class="list-bd">
+                <ul>
+                    <li><a href="#">商户管理平台新增投票和多客服功能<i class="ico-new"></i></a></li>
+                    <li><a href="#">公众平台回复用户消息时限变更通知</a></li>
+                    <li><a href="#">微信公众平台关于诱导分享行为的公告</a></li>
+                    <li><a href="#">微信公众平台新版公测更新说明</a></li>
+                    <li><a href="#">微信公众平台增加数据统计功能</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 问题帮助 E -->
+        
+    </div>
+</div>
+<!-- 内容 E -->
+
+<!--footer-->
+<?php require_once("/template/footer.shtml"); ?>
+<!--footer-->
+
+</body>
+<script type="text/javascript" src="<?=base_url("/static/js/westore/home/westore.index.js")?>"></script>
+</html>

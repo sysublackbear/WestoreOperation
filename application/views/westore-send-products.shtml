@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>发货页面 - 微信商户平台</title>
+<link rel="stylesheet" href="<?=base_url("/static/css/global_min.css")?>" />
+<link rel="shortcut icon" href="<?=base_url("/static/core/favicon.ico")?>" type="image/x-icon"/>
+</head>
+
+<body class="page-tips">
+
+<!-- 头部 S -->
+<?php require_once("/template/header.shtml"); ?>
+<!-- 头部 E -->
+
+<!--弹出背景层S-->
+<div class="backGround"></div>
+<!--弹出背景层E-->
+
+<!-- 内容 S -->
+<div class="container">
+    <div class="wrap body body-bg">
+        <!-- 主区域 S -->
+        <div class="page-error">
+        	<i class="ico-face"></i>
+        </div>
+        <!-- 主区域 E -->
+    </div>
+    
+    <!-- 退款成功 S -->        
+    <div id="refundFinish" class="dialog dialog-middle hide" style="margin-top:-200px;">
+    	<div class="dialog-hd">
+    		<h3>发货成功</h3>
+    		<a class="cls" name="closeRefundFinish" href="javascript:;">关闭</a>
+    	</div>
+    	<div class="dialog-bd ">
+    		<div class="tool-tips tool-left">
+    			<div class="tips-img"><i class="tips-ico ico-ok"></i></div>
+    			<div class="tips-con">
+    				<h3>发货成功!</h3>
+    				<div class="opt">
+    					<a class="btn btn-primary" name="RefundFinishConfirm" href="#">关闭本页面</a>
+    				</div>
+                </div>
+            </div>
+  		</div>
+  	</div>        
+   <!-- 退款成功 E -->
+
+</div>
+<!-- 内容 E -->
+
+<!-- 底部 S -->
+<?php require_once("/template/footer.shtml"); ?>
+<!-- 底部 E -->
+
+</body>
+
+<script type="text/javascript" src="<?=base_url("/static/js/westore/products/westore.send.products.js")?>"></script>
+</html>

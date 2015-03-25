@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>账户概览 - 微信商户平台</title>
+<link rel="stylesheet" href="<?=base_url("/static/css/global_min.css")?>" />
+<link rel="shortcut icon" href="<?=base_url("/static/core/favicon.ico")?>" type="image/x-icon"/>
+</head>
+
+<body class="account-view">
+
+<!-- 头部 S -->
+<?php require_once("/template/header.shtml"); ?>
+<!-- 头部 E -->
+
+<!-- 内容 S -->
+<div class="container">
+    <div class="wrap body">
+        
+        <!-- 侧边栏 S -->
+        <?php $this->load->view('template/left.shtml'); ?>
+        <!-- 侧边栏 E -->
+        
+        <!-- 主区域 S -->
+        <div class="content">
+            <div class="content-hd">
+                <div class="tit-nav">账户概览</div>
+            </div>
+            <div class="content-bd">
+                <div class="moda basic-info">
+                    <div class="moda-hd">
+                        <h2>账户信息</h2>
+                    </div>
+                    <div class="moda-bd">
+                        <div class="text-list">
+                            <dl>
+                                <dt>现金账户总额：</dt>
+                                <dd><?php if(isset($userAccountView['totalAccount'])){echo $userAccountView['totalAccount'];}else{echo '0.00';} ?>元</dd>
+                            </dl>
+                            
+                            <dl>
+                                <dt>可用余额：</dt>
+                                <dd><?php if(isset($userAccountView['availableBalance'])){echo $userAccountView['availableBalance'];}else{echo '0.00';} ?>元</dd>
+                            </dl>
+                            <dl>
+                                <dt>保证金余额：</dt>
+                                <dd><?php if(isset($userAccountView['depositBalance'])){echo $userAccountView['depositBalance'];}else{echo '0.00';} ?>元</dd>
+                            </dl>
+                            <dl>
+                                <dt>未结算金额：</dt>
+                                <dd><?php if(isset($userAccountView['noSettledBalance'])){echo $userAccountView['noSettledBalance'];}else{echo '0.00';} ?>元</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="moda order-stat hide">
+                    <div class="moda-hd">
+                        <h2>历史订单统计</h2>
+                        <p><a href="./orderManage">查看订单</a><span class="gap">|</span><a href="./consumeManage">查看消费</a></p>
+                    </div>
+                    <div class="moda-bd">
+                        <table class="table">
+                            <colgroup>
+                                <col class="c1"></col>
+                                <col class="c2"></col>
+                                <col class="c3"></col>
+                                <col class="c4"></col>
+                                <col class="c5"></col>
+                                <col class="c6"></col>
+                                <col class="c7"></col>
+                            </colgroup>
+                            <tr>
+                                <th>类型</th>
+                                <th>交易笔数</th>
+                                <th>交易金额(元)</th>
+                                <th>成功笔数</th>
+                                <th>成功金额(元)</th>
+                                <th>退款笔数</th>
+                                <th>退款金额(元)</th>
+                            </tr>
+                            <tr name="userHistoryTrade" <?php if($userHistoryTrade['ret'] == 0){echo "class='hide'";} ?>>
+                                <td><?php echo $userHistoryTrade['tradeType']; ?></td>
+                                <td><?php if(isset($userHistoryTrade['tradeAmount'])){echo $userHistoryTrade['tradeAmount'];}else{echo '0';} ?></td>
+                                <td><?php if(isset($userHistoryTrade['tradeMoney'])){echo $userHistoryTrade['tradeMoney'];}else{echo '0.00';} ?></td>
+                                <td><?php if(isset($userHistoryTrade['successAmount'])){echo $userHistoryTrade['successAmount'];}else{echo '0';}?></td>
+                                <td><?php if(isset($userHistoryTrade['successTradeMoney'])){echo $userHistoryTrade['successTradeMoney'];}else{echo '0.00';} ?></td>
+                                <td><?php if(isset($userHistoryTrade['failedAmount'])){echo $userHistoryTrade['failedAmount'];}else{echo '0';}?></td>
+                                <td><?php if(isset($userHistoryTrade['failedTradeMoney'])){echo $userHistoryTrade['failedTradeMoney'];}else{echo '0.00';} ?></td>
+                            </tr>
+                            <tr name="nonUserHistoryTrade" class="empty <?php if($userHistoryTrade['ret'] == 1){echo "hide";} ?>">
+                                <td colspan="7">暂无数据</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="moda order-stat hide">
+                	
+                	<!--这一块有时间再做S-->
+                    <div class="moda-hd">
+                        <h2>最近结算信息</h2>
+                        <p class="hide"><a href="#">已结算查询</a><span class="gap">|</span><a href="#">未结算查询</a></p>
+                    </div>
+                    <!--这一块有时间再做E-->
+                    
+                    
+                    <div class="moda-bd">
+                        <table class="table">
+                            <colgroup>
+                                <col class="c1"></col>
+                                <col class="c2"></col>
+                                <col class="c3"></col>
+                                <col class="c4"></col>
+                                <col class="c5"></col>
+                                <col class="c6"></col>
+                            </colgroup>
+                            <tr>
+                                <th>序号</th>
+                                <th>划账日期</th>
+                                <th>划账金额(元)</th>
+                                <th>结算金额(元)</th>
+                                <th>手续费金额(元)</th>
+                                <th>结算详情</th>
+                            </tr>
+                            
+                            <?php 
+                            	for($i = 0;$i < $recentTradeAccords['totalNum'];$i++){
+                            		echo "<tr>";
+                            		echo "<td>".strval($i+1)."</td>";
+                            		echo "<td>".$recentTradeAccords['tradeList'][$i]['accountTime']."</td>";
+                            		echo "<td>".$recentTradeAccords['tradeList'][$i]['accountRemit']."</td>";
+                            		echo "<td>".$recentTradeAccords['tradeList'][$i]['accountSettled']."</td>";
+                            		echo "<td>".$recentTradeAccords['tradeList'][$i]['accountPoundage']."</td>";
+                            		echo "<td>".$recentTradeAccords['tradeList'][$i]['tradeInfo']."</td>";
+                            		echo "</tr>";
+                            	}
+                            ?>
+                            
+                            <tr class="empty <?php if($recentTradeAccords['totalNum'] != 0){echo 'hide';} ?>">
+                                <td colspan="6">暂无数据</td>
+                            </tr>
+                         </table>
+                    </div>
+                </div>
+                
+                <div class="moda custom-property">
+                    <div class="moda-hd">
+                        <h2>常用功能</h2>
+                    </div>
+                    <div class="moda-bd">
+                        <ul class="clr">
+                            <li><a href="./orderManage">查看订单</a></li>
+                            <li><a href="./consumeManage">查看消费</a></li>
+                            <li><a href="./myProducts">我的商品</a></li>
+                            <li><a href="./addProducts">新增商品</a></li>
+                            <li><a href="./salesPromotion">新增促销</a></li>
+                            <li><a href="./onlineProducts">在线商品</a></li>
+                            <li><a href="#">即时沟通</a></li>
+                            <li><a href="./wechatMembership">微信会员</a></li>
+                            <li><a href="#">修改登录密码</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- 主区域 E -->
+
+   </div>
+
+</div>
+<!-- 内容 E -->
+
+<!-- 底部 S -->
+<?php require_once("/template/footer.shtml"); ?>
+<!-- 底部 E -->
+
+</body>
+
+<script type="text/javascript" src="<?=base_url("/static/js/westore/account/westore.account.view.js")?>"></script>
+</html>

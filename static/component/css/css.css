@@ -1,0 +1,31 @@
+﻿
+.nav-bar{ height:40px;background:#1a1a1a;border:1px solid #252525;}
+.nav-bar ul{ width:1003px;margin:0 auto;}
+.nav-bar li{ float:left;line-height:40px;}
+.nav-bar li a{ padding:0 15px;color:#999999;}
+.nav-bar li a:hover{ color:#fff;}
+
+.container{ width:1003px;overflow:hidden;}
+.col-side{ float:left;width:218px;}
+.col-main{ float:right;width:763px;}
+
+.menu-bar{background:#fff;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;}
+.menu-bar li a{ display:block;padding:7px 14px;border:1px solid #e5e5e5;position:relative;margin-bottom:-1px;color:#0088cc;}
+.menu-bar li a:hover{color:#005580;text-decoration:none;background:#f5f5f5;}
+.menu-bar li .ico-arrow-r{ width:8px;height:11px;position:absolute;top:50%;right:14px;margin-top:-5px;opacity:.25;background:url(../img/ico_arrow_r.png) no-repeat;}
+.menu-bar li a:hover .ico-arrow-r{opacity:.5;}
+.menu-bar li.active a,.menu-bar li.active a:hover{color:#ffffff;background:#0088cc;border:1px solid #0088cc;z-index:2;}
+.menu-bar li.active .ico-arrow-r{opacity:1;background:url(../img/ico_arrow_r_w.png) no-repeat;}
+.menu-bar li:first-child a{-webkit-border-radius:6px 6px 0 0;-moz-border-radius:6px 6px 0 0;border-radius:6px 6px 0 0;}
+.menu-bar li:last-child a{-webkit-border-radius:0 0 6px 6px;-moz-border-radius:0 0 6px 6px;border-radius:0 0 6px 6px;}
+
+.show-menu-fixed .menu-bar{width:218px;position:fixed;top:77px;}
+
+.demo-item{ margin-bottom:22px;}
+.demo-item .case-name{ float:left;padding:3px 7px;background:#f5f5f5;border:1px solid #ddd;border-radius:4px 0;color:#9da0a4;font-size:12px;margin:0 0 -20px 0;position:relative;z-index:99;}
+.demo-item .case-show{padding:41px 20px 20px;background:#fff;border:1px solid #ddd;border-radius:4px;position:relative;}
+.demo-item .case-code{margin-top:-20px;padding:34px 20px 15px;background:#f5f5f5;border:1px solid #ddd;}
+.demo-item .case-code pre{display:block;margin:0;line-height:20px;word-break:break-all;word-wrap:break-word;white-space:pre;white-space:pre-wrap;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+
+
+.color-box .bg-bar{ display:inline-block;width:100px;height:12px;margin:-2px 20px 0 0;vertical-align:middle;overflow:hidden;}

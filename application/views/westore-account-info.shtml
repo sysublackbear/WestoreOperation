@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>账户信息 - 微信商户平台</title>
+<link rel="stylesheet" href="<?=base_url("/static/css/global_min.css")?>" />
+<link rel="shortcut icon" href="<?=base_url("/static/core/favicon.ico")?>" type="image/x-icon"/>
+</head>
+
+<body class="account-info">
+
+<!-- 头部 S -->
+<?php require_once("/template/header.shtml"); ?>
+<!-- 头部 E -->
+
+<!--弹出背景层S-->
+<div class="backGround"></div>
+<!--弹出背景层E-->
+
+
+<!-- 内容 S -->
+<div class="container">
+    <div class="wrap body">
+        
+        <!-- 侧边栏 S -->
+        <?php $this->load->view('template/left.shtml'); ?>
+        <!-- 侧边栏 E -->
+        
+        <!-- 主区域 S -->
+        <div class="content">
+            <div class="content-hd">
+                <div class="tab-nav"><a class="on" href="./accountInfo">账户资料</a><a href="./accountInvoice">发票信息</a></div>
+            </div>
+            <div class="content-bd">
+                
+                <div id="merchantInfo" class="moda basic-info">
+                    <div class="moda-hd">
+                        <h2>商户基本信息</h2>
+                         <p name="infoUpdate"><a href="#">修改</a></p>
+                         <p name="infoCancel" class="hide"><a class="btn btn-primary" href="#">取消</a></p>
+                         <p name="infoConfirm" class="hide"><a class="btn btn-primary" href="#">确定</a></p>
+                    </div>
+                    <div class="moda-bd">
+                        <div class="text-list">
+                            <dl>
+                                <dt>商户号：</dt>
+                                <dd><?php if(isset($userInfo['merchantNo'])){echo $userInfo['merchantNo'];}?></dd>
+                            </dl>
+                            <dl>
+                                <dt>公司名称：</dt>
+                                <dd><?php if(isset($userInfo['companyName'])){echo $userInfo['companyName'];}?></dd>
+                            </dl>
+                            <dl>
+                                <dt>联系人：</dt>
+                                <dd><?php if(isset($userInfo['contact'])){echo $userInfo['contact'];}?></dd>
+                            </dl>
+                            <dl>
+                                <dt>联系电话：</dt>
+                                <dd><span class="ipt-box"><input class="ipt" name="userTelphone" value="<?php if(isset($userInfo['userTelphone'])){echo $userInfo['userTelphone'];}?>" readonly="readonly" type="text"></span> </dd>
+                            </dl>
+                            <dl>
+                                <dt>网站名称：</dt>
+                                <dd><span class="ipt-box"><input class="ipt" name="userWebsiteName" value="<?php if(isset($userInfo['userWebsiteName'])){echo $userInfo['userWebsiteName'];} ?>" readonly="readonly" type="text"></span> </dd>
+                            </dl>
+                            <dl>
+                                <dt>网站地址：</dt>
+                                <dd><span class="ipt-box"><input class="ipt" name="userWebsite" value="<?php if(isset($userInfo['userWebsite'])){echo $userInfo['userWebsite'];}?>"  readonly="readonly" type="text"></span> </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="moda settle-info">
+                    <div class="moda-hd">
+                        <h2>结算信息</h2>
+                        <p name="settledUpdate"><a href="#">修改</a></p>
+                        <p name="settledCancel" class="hide"><a class="btn btn-primary" href="#">取消</a></p>
+                        <p name="settledConfirm" class="hide"><a class="btn btn-primary" href="#">确定</a></p>
+                    </div>
+                    <div class="moda-bd">
+                        <div class="text-list">
+                            <dl>
+                                <dt>银行账户所有人：</dt>
+                                <dd><span class="ipt-box"><input class="ipt" name="bankAccountUser" value="<?php if(isset($settledInfo['bankAccountUser'])){echo $settledInfo['bankAccountUser'];}?>"  readonly="readonly" type="text"></span> </dd>
+                            </dl>
+                            <dl>
+                                <dt>开户银行：</dt>
+                                <dd><span class="ipt-box"><input class="ipt" name="bankName" value="<?php if(isset($settledInfo['bankName'])){echo $settledInfo['bankName'];}?>"  readonly="readonly" type="text"></dd>
+                            </dl>
+                            <dl>
+                                <dt>开户银行省市信息：</dt>
+                                <dd><span class="ipt-box"><input class="ipt" name="bankInfo" value="<?php if(isset($settledInfo['bankInfo'])){echo $settledInfo['bankInfo'];}?>"  readonly="readonly" type="text"></dd>
+                            </dl>
+                            <dl>
+                                <dt>开户详细名称：</dt>
+                                <dd><span class="ipt-box"><input class="ipt" name="bankAccountInfo" value="<?php if(isset($settledInfo['bankAccountInfo'])){echo $settledInfo['bankAccountInfo'];}?>"  readonly="readonly" type="text"></dd>
+                            </dl>
+                            <dl>
+                                <dt>银行账户：</dt>
+                                <dd><span class="ipt-box"><input class="ipt" name="bankAccountNo" value="<?php if(isset($settledInfo['bankAccountNo'])){echo $settledInfo['bankAccountNo'];}?>"  readonly="readonly" type="text"></dd>
+                            </dl>
+                            <dl>
+                                <dt>开户名称：</dt>
+                                <dd><span class="ipt-box"><input class="ipt" name="bankAccountUserName" value="<?php if(isset($settledInfo['bankAccountUserName'])){echo $settledInfo['bankAccountUserName'];}?>"  readonly="readonly" type="text"></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="moda settle-info">
+                    <div class="moda-hd">
+                        <h2>安全证书</h2>
+                        <p class="hide"><a href="#">修改</a></p>
+                    </div>
+                    <div class="moda-bd">
+                        <div class="text-list">
+                            <dl>
+                                <dt>已安装电脑数量：</dt>
+                                <dd><?php if(isset($safeCertificate['amount'])){echo $safeCertificate['amount'];}else{echo '0';}?></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 主区域 E -->
+        
+        <!-- 修改成功完成 S -->        
+        <div id="updateSuccessFinish" class="dialog dialog-middle hide" style="margin-top:-200px;">
+        	<div class="dialog-hd">
+        		<h3>提示信息</h3>
+        		<a class="cls" name="closeUpdateSuccessFinish" href="javascript:;">关闭</a>
+        	</div>
+        	<div class="dialog-bd ">
+        		<div class="tool-tips tool-left">
+        			<div class="tips-img"><i class="tips-ico ico-ok"></i></div>
+        			<div class="tips-con">
+        				<h3>修改成功！</h3>
+        				<div class="opt"><a name="updateSuccessConfirm"  class="btn btn-primary" href="#">确定</a></div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <!-- 修改成功完成 E -->
+        
+        <!-- 修改失败完成 S -->        
+        <div id="updateFailedFinish" class="dialog dialog-middle hide" style="margin-top:-200px;">
+        	<div class="dialog-hd">
+        		<h3>提示信息</h3>
+        		<a class="cls" name="closeUpdateFailedFinish" href="javascript:;">关闭</a>
+        	</div>
+        	<div class="dialog-bd ">
+        		<div class="tool-tips tool-left">
+        			<div class="tips-img"><i class="tips-ico ico-ok"></i></div>
+        			<div class="tips-con">
+        				<h3>修改失败！请与管理员联系。</h3>
+        				<div class="opt"><a name="updateFailedConfirm"  class="btn btn-primary" href="#">确定</a></div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <!-- 修改失败完成 E -->
+        
+    </div>
+
+</div>
+<!-- 内容 E -->
+
+<!-- 底部 S -->
+<?php require_once("/template/footer.shtml"); ?>
+<!-- 底部 E -->
+
+</body>
+
+<script type="text/javascript" src="<?=base_url("/static/js/westore/account/westore.account.info.js")?>"></script>
+</html>

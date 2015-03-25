@@ -1,0 +1,88 @@
+		<!--侧边栏S-->
+		<div id="merchantLeft" class="sidebar hide">
+            <div class="menu">
+                <!-- 交互说明
+                     1.给标签dl添加样式"open",显示下拉列表
+                     2.给标签dt或dd添加样式"on",显示选中状态
+                -->
+                <dl>
+                	<dl name="m_account" <?php if($websitecode == 1){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-funds"></i>账户设置<i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 101){echo "class='on'";}  ?>><a href="./accountView">账户概览</a></dd>
+                    <dd <?php if($websitesoncode == 102){echo "class='on'";}  ?>><a href="./accountInfo">账户信息</a></dd>
+                    <dd <?php if($websitesoncode == 103){echo "class='on'";}  ?>><a href="./loginPassword">密码安全</a></dd>
+                	<dd <?php if($websitesoncode == 104){echo "class='on'";}  ?>><a href="./accountInvoice">发票信息</a>
+                </dl>
+                <dl name="m_order" <?php if($websitecode == 2){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-settle"></i>网络订单<i class="ico-new"></i><i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 201){echo "class='on'";} ?>><a href="./orderManage">查看订单</a></dd>
+                    <dd <?php if($websitesoncode == 202){echo "class='on'";} ?>><a href="./consumeManage">查看消费</a></dd>
+                    <dd <?php if($websitesoncode == 203){echo "class='on'";} ?>><a href="./myReceiveOrder">查看收单</a></dd>
+                </dl>
+                <dl name="m_products" <?php if($websitecode == 3){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-market"></i>我的商品<i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 301){echo "class='on'";} ?>><a href="./myProducts">我的商品</a></dd>
+                    <dd <?php if($websitesoncode == 302){echo "class='on'";} ?>><a href="./salesPromotion">新增促销</a></dd>
+                    <dd <?php if($websitesoncode == 303){echo "class='on'";} ?>><a href="./onlineProducts">在线商品</a></dd>
+                    <dd <?php if($websitesoncode == 304){echo "class='on'";} ?>><a href="./addProducts">新增商品</a></dd>
+                    <dd <?php if($websitesoncode == 305){echo "class='on'";} ?>><a href="./updateProducts">更改商品信息</a></dd>
+                    <dd <?php if($websitesoncode == 306){echo "class='on'";} ?>><a href="./buyProducts">购买商品</a></dd>
+                </dl>
+                <dl name="m_contact" <?php if($websitecode == 4){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-setup"></i>即时沟通<i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 401){echo "class='on'";} ?>><a href="./westoreContact">即时沟通</a></dd>
+                </dl>
+                <dl name="m_membership" <?php if($websitecode == 5){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-trade"></i>我的会员<i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 501){echo "class='on'";} ?>><a href="./wechatMembership">微信会员</a></dd>
+                </dl>
+                <dl name="m_help" <?php if($websitecode == 6){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-setup"></i>帮助导航<i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 601){echo "class='on'";} ?>><a href="./help">帮助导航</a></dd>
+                </dl>
+            </div>
+            
+        </div>
+        
+        <div id="UserLeft" class="sidebar hide">
+            <div class="menu">
+                <!-- 交互说明
+                     1.给标签dl添加样式"open",显示下拉列表
+                     2.给标签dt或dd添加样式"on",显示选中状态
+                -->
+                <dl>
+                	<dl name="m_account" <?php if($websitecode == 1){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-funds"></i>账户设置<i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 101){echo "class='on'";}  ?>><a href="./accountView">账户概览</a></dd>
+                    <dd <?php if($websitesoncode == 102){echo "class='on'";}  ?>><a href="./accountInfo">账户信息</a></dd>
+                    <dd <?php if($websitesoncode == 103){echo "class='on'";}  ?>><a href="./loginPassword">密码安全</a></dd>
+                	<dd <?php if($websitesoncode == 104){echo "class='on'";}  ?>><a href="./accountInvoice">发票信息</a>
+                </dl>
+                <dl name="m_order" <?php if($websitecode == 2){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-settle"></i>网络订单<i class="ico-new"></i><i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 201){echo "class='on'";} ?>><a href="./orderManage">查看订单</a></dd>
+                    <dd <?php if($websitesoncode == 202){echo "class='on'";} ?>><a href="./consumeManage">查看消费</a></dd>
+                </dl>
+                <dl name="m_products" <?php if($websitecode == 3){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-market"></i>我的商品<i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 302){echo "class='on'";} ?>><a href="./salesPromotion">新增促销</a></dd>
+                    <dd <?php if($websitesoncode == 303){echo "class='on'";} ?>><a href="./onlineProducts">在线商品</a></dd>
+                    <dd <?php if($websitesoncode == 306){echo "class='on'";} ?>><a href="./buyProducts">购买商品</a></dd>
+                </dl>
+                <dl name="m_contact" <?php if($websitecode == 4){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-setup"></i>即时沟通<i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 401){echo "class='on'";} ?>><a href="./westoreContact">即时沟通</a></dd>
+                </dl>
+                <dl name="m_membership" <?php if($websitecode == 5){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-trade"></i>我的商家<i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 501){echo "class='on'";} ?>><a href="./wechatMembership">微信商家</a></dd>
+                </dl>
+                <dl name="m_help" <?php if($websitecode == 6){echo "class='open'";} ?>>
+                    <dt><a href="#"><i class="type-ico ico-setup"></i>帮助导航<i class="ico-switch"></i></a></dt>
+                    <dd <?php if($websitesoncode == 601){echo "class='on'";} ?>><a href="./help">帮助导航</a></dd>
+                </dl>
+            </div>
+            
+        </div>
+        <script type="text/javascript" src="<?=base_url("/static/js/westore/template/westore.left.js")?>"></script>
+		<!--侧边栏E-->

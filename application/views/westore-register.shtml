@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>注册向导 - O2O微店平台</title>
+<link rel="stylesheet" href="<?=base_url("/static/css/global_min.css")?>" />
+<link rel="stylesheet" href="<?=base_url("/static/css/jquery-ui.min.css")?>" />
+<link rel="stylesheet" href="<?=base_url("/static/css/jquery-ui-timepicker-addon.css")?>" />
+<link rel="shortcut icon" href="<?=base_url("/static/core/favicon.ico")?>" type="image/x-icon"/>
+</head>
+<body class="hongbao-create">
+
+<!--头部S-->
+<?php require_once("/template/header.shtml"); ?>
+<!--头部E-->
+
+<!--弹出背景层S-->
+<div class="backGround"></div>
+<!--弹出背景层E-->
+
+<!-- 内容 S -->
+<div class="container">
+    <div class="wrap body">        
+        <!-- 主区域 S -->
+        <div class="content" style="width:1160px">
+            <div class="content-hd">设置向导</div>
+            <div class="content-bd">
+                <div class="process-bar">
+                    <!-- 交互说明，切换li的class：
+                         1.根据步骤数添加样式size+n（n为步骤数）
+                         2.当前为on，前一个为prev，前一个之前的都为pprev，后一个为next，后一个之后的都为nnext，最后一个加last
+                    -->
+                    <ul>
+                        <li id="step1" class="size4"><span>Step1:注册用户</span></li>
+                        <li id="step2" class="size4"><span>Step2:注册商户(选填)</span></li>
+                        <li id="step3" class="size4"><span>Step3:设置向导(选填)</span></li>
+                        <li id="step4" class="size4"><span>Step4:注册完成</span></li>
+                    </ul>
+                </div>
+
+                <!-- Step1：注册用户 -->                
+                <div id="registerUsers" class="moda hide">
+                    <div class="moda mb">
+                        <div class="moda-bd">
+                        	<div class="form-item">
+                                <label class="label" for="">登录账号：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="loginName" type="text" placeholder="输入6位以上的字母和数字的组合"></span>
+                                <span name="loginNameAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">用户密码：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="userPassword" type="password" placeholder="请输入6位以上的密码"></span>
+                                <span name="userPasswordAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">密码确认：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="userPassword2" type="password" placeholder="请再次输入密码"></span>
+                                <span name="userPassword2Alert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">邮箱：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="email" type="email" placeholder="请输入邮箱地址"></span>
+                                <span name="emailAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">手机号码：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="mobile" type="text" placeholder="请输入手机号码"></span>
+                                <span name="mobileAlert" class="tips-error hide">输入手机号码错误！</span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">用户昵称：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="nickname" type="text" placeholder="请输入用户昵称"></span>
+                                <span name="nicknameAlert" class="tips-error hide">输入用户昵称错误！</span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">联系人：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="contact" type="text" placeholder="请输入联系人"></span>
+                                <span name="contactAlert" class="tips-error hide">输入联系人错误！</span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">微信号：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="wechatNo" type="text" placeholder="请输入微信号"></span>
+                                <span name="wechatNoAlert" class="tips-error hide">输入微信号错误！</span>
+                            </div>
+                            <div class="form-item"><a class="btn btn-primary" name="step1Tostep2" href="##">下一步</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step1：注册用户 -->
+                
+                <!-- Step2：注册商户（选填） -->                
+                <div id="registerMerchants" class="moda hide">
+                    <div class="moda mb">
+                        <div class="moda-bd">
+                            <div class="form-item">
+                                <label class="label" for="">商家编码：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="merchantCode" type="text" placeholder="请输入8位商家编码（包含数字和字母）"></span>
+                                <span name="merchantCodeAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">商家名称：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="merchantName" type="text" placeholder="请输入商家名称"></span>
+                                <span name="merchantNameAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">联系人：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="merchantContact" type="text" placeholder="请输入联系人(2到5位汉字)"></span>
+                                <span name="merchantContactAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">微信公众号：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="wechatMembership" type="text" placeholder="请输入微信公众号"></span>
+                                <span name="wechatMembershipAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">网站地址：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="website" type="text" placeholder="请输入网站地址"></span>
+                                <span name="websiteAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">网站名称：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="websiteName" type="text" placeholder="请输入网站名称"></span>
+                                <span name="websiteNameAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">联系电话：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="contactMobile" type="text" placeholder="请输入联系电话"></span>
+                                <span name="contactMobileAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">传真：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="fax" type="text" placeholder="请输入传真号码(选填)"></span>
+                                <span name="faxAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">商户邮箱地址：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="merchantEmail" type="text" placeholder="请输入商户邮箱地址"></span>
+                                <span name="merchantEmailAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">营业开始：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" readonly="readonly" name="starttime" type="text" placeholder="请选择营业开始时间"></span>
+                                <span name="starttimeAlert" class="tips-error hide">结束时间不能早于开始时间！</span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">营业结束：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" readonly="readonly" name="endtime" type="text" placeholder="请选择营业结束时间"></span>
+                                <span name="endtimeAlert" class="tips-error hide">结束时间不能早于开始时间！</span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">运费：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="freight" type="text" placeholder="请输入运费（整数）"></span> 元
+                                <span name="freightAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">最低配送：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="minFreight" type="text" placeholder="请输入最低配送（整数）"></span> 元
+                                <span name="minFreightAlert" class="tips-error hide">最低配送输入错误！</span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">配送时间（分）：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="freightTime" type="text" placeholder="请输入配送时间（分）"></span>
+                                <span name="freightTimeAlert" class="tips-error hide">配送时间输入错误！</span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">配送范围：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="freightArea" type="text" placeholder="请输入配送范围"></span>
+                                <span name="freightAreaAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                            	<a class="btn btn-primary" name="step2Tostep3" href="##">下一步(注册商户)</a>
+                            	<a class="btn btn-primary" name="step2Tostep3u" href="##">跳过(只想注册用户)</a>
+                            	<a class="btn btn-default" name="step2Tostep1" href="##">返回</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step2：注册商户（选填） -->
+                
+                <!-- Step3：设置向导 -->   
+                <div id="userSet" class="moda hide">
+                    <div class="moda mb">
+                        <div class="moda-bd">
+                        	<div class="form-item">
+                                <label class="label" for="">上传用户头像：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="userIcon" type="file" placeholder="请输入配送时间（分）"></span>
+                                <span name="" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">服务器：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="server" type="text" placeholder=""></span>
+                                <span name="" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">数据库名：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="database" type="text" placeholder=""></span>
+                                <span name="" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">端口：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="port" type="text" placeholder=""></span>
+                                <span name="" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">账户：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="account" type="text" placeholder=""></span>
+                                <span name="" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">密码：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="databasePassword" type="password" placeholder=""></span>
+                                <span name="" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">银行账户所有人：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="bankAccountUser" type="text" placeholder="请输入银行账户所有人"></span>
+                                <span name="bankAccountUserAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">开户银行：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="bankName" type="text" placeholder="请输入开户银行"></span>
+                                <span name="bankNameAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">开户银行省市信息：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="bankInfo" type="text" placeholder="请输入开户银行省市信息"></span>
+                                <span name="bankInfoAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">开户详细名称：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="bankAccountInfo" type="text" placeholder="请输入开户详细名称"></span>
+                                <span name="bankAccountInfoAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">银行账户：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="bankAccountNo" type="text" placeholder="请输入银行账户"></span>
+                                <span name="bankAccountNoAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">开户名称：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="bankAccountUserName" type="text" placeholder="请输入开户名称"></span>
+                                <span name="bankAccountUserNameAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item"><a class="btn btn-primary" name="step3Tostep4" href="##">下一步</a><a class="btn btn-default" name="step3Tostep2" href="##">返回</a></div> 
+                        </div>
+                    </div>
+                </div>
+                <!--Step3：设置向导 -->
+                
+                <!-- 配置完成 S -->        
+                <div id="registerFinish" class="dialog dialog-middle hide" style="margin-top:-200px;">
+                	<div class="dialog-hd">
+                		<h3>注册成功</h3>
+                		<a class="cls" name="closeRegisterFinish" href="javascript:;">关闭</a>
+                	</div>
+                	<div class="dialog-bd ">
+                		<div class="tool-tips tool-left">
+                			<div class="tips-img"><i class="tips-ico ico-ok"></i></div>
+                			<div class="tips-con">
+                				<h3>你已成功注册!即将为你跳转到主页面......</h3>
+                				<div class="opt"><a class="btn btn-primary" href="#">确定</a></div>
+                			</div>
+               			</div>
+  					</div>        
+                <!-- 配置完成 E -->
+            </div>
+        </div>
+        <!-- 主区域 E -->
+    	</div>
+	</div>
+</div>
+<!-- 内容 E -->
+
+<!--尾部S-->
+<?php require_once("/template/footer.shtml"); ?>
+<!--尾部E-->
+
+</body>
+<script type="text/javascript" src="<?=base_url("/static/js/jquery-ui.min.js")?>"></script>
+<script type="text/javascript" src="<?=base_url("/static/js/jquery-ui-timepicker-addon.js")?>"></script>
+<script type="text/javascript" src="<?=base_url("/static/js/westore/register/westore.register.js")?>"></script>
+</html>

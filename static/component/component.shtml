@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>组件 - 微信商户平台</title>
+<link rel="stylesheet" href="../css/global_min.css" />
+<link rel="stylesheet" href="css/css.css" />
+</head>
+
+<body class="show-menu-fixed">
+<!-- 
+	交互说明，控制body
+	1.菜单移动到窗口顶部时，添加样式show-menu-fixed，标签跟随窗口移动
+-->
+<div class="nav-bar">
+	<ul>
+    	<li><a href="index.shtml">Base CSS</a></li>
+    	<li><a href="component.shtml">Component</a></li>
+    </ul>
+</div>
+<div class="container">
+    <div class="col-side">
+        <div class="menu-bar">
+            <ul>
+                <li><a href="#tips">tips<i class="ui-ico ico-arrow-r"></i></a></li>
+                <li><a href="#process">process<i class="ui-ico ico-arrow-r"></i></a></li>
+                <li><a href="#tab">tab<i class="ui-ico ico-arrow-r"></i></a></li>
+                <li><a href="#list">list<i class="ui-ico ico-arrow-r"></i></a></li>
+                <li><a href="#form">form<i class="ui-ico ico-arrow-r"></i></a></li>
+                <li><a href="#button">button<i class="ui-ico ico-arrow-r"></i></a></li>
+                <li><a href="#popup">popup<i class="ui-ico ico-arrow-r"></i></a></li>
+                <li><a href="#dialog">dialog<i class="ui-ico ico-arrow-r"></i></a></li>
+                <li><a href="#table">table<i class="ui-ico ico-arrow-r"></i></a></li>
+                <li><a href="#pagination">pagination<i class="ui-ico ico-arrow-r"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-main">
+        <!-- tips S -->
+    	<div class="demo-item" id="tips">
+            <div class="case-name">tips</div>
+            <div class="case-show">
+                <div class="tool-tips">
+                    <div class="tips-img"><span class="tips-ico ico-warn"></span></div>
+                    <div class="tips-con">
+                        <h3>本机已安装了数字证书</h3>
+                        <p>您可以在本机操作账户资金（如：付款、提现、支付等）</p>
+                    </div>
+                </div>
+            </div>
+            <div class="case-code">
+                <pre><div class="tool-tips">
+    <div class="tips-img"><span class="tips-ico ico-ok"></span></div>
+    <div class="tips-con">
+        <h3>本机已安装了数字证书</h3>
+        <p>您可以在本机操作账户资金（如：付款、提现、支付等）</p>
+    </div>
+</div></pre>
+<table class="table" style="margin-top:15px;text-align:left;">
+    <tr>
+        <td style="width:25px;"><span class="tips-ico ico-ok"></span></td>
+        <td><pre><span class="tips-ico ico-ok"></span></pre></td>
+    </tr>
+    <tr>
+        <td><span class="tips-ico ico-error"></span></td>
+        <td><pre><span class="tips-ico ico-error"></span></pre></td>
+    </tr>
+    <tr>
+        <td><span class="tips-ico ico-info"></span></td>
+        <td><pre><span class="tips-ico ico-info"></span></pre></td>
+    </tr>
+    <tr>
+        <td><span class="tips-ico ico-wait"></span></td>
+        <td><pre><span class="tips-ico ico-wait"></span></pre></td>
+    </tr>
+    <tr>
+        <td><span class="tips-ico ico-ques"></span></td>
+        <td><pre><span class="tips-ico ico-ques"></span></pre></td>
+    </tr>
+</table>
+            </div>
+        </div>
+        <!-- tips E -->
+        <!-- process S -->
+    	<div class="demo-item" id="process">
+            <div class="case-name">process</div>
+            <div class="case-show">
+                <div class="process-bar">
+                    <!-- 交互说明，切换li的class：
+                         1.根据步骤数添加样式size+n（n为步骤数）
+                         2.当前为on，前一个为prev，前一个之前的都为pprev，后一个为next，后一个之后的都为nnext，最后一个加last
+                    -->
+                    <ul>
+                        <li class="size4 on"><span>基本设置</span></li>
+                        <li class="size4 next"><span>领取规则</span></li>
+                        <li class="size4 nnext"><span>使用场景</span></li>
+                        <li class="size4 nnext last"><span>确认创建</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="case-code">
+                <pre><div class="process-bar">
+    <!-- 交互说明，切换li的class：
+         1.根据步骤数添加样式size+n（n为步骤数）
+         2.当前为on，前一个为prev，前一个之前的都为pprev，后一个为next，后一个之后的都为nnext，最后一个加last
+    -->
+    <ul>
+        <li class="size4 on"><span>基本设置</span></li>
+        <li class="size4 next"><span>领取规则</span></li>
+        <li class="size4 nnext"><span>使用场景</span></li>
+        <li class="size4 nnext last"><span>确认创建</span></li>
+    </ul>
+</div></pre>
+            </div>
+        </div>
+        <!-- process E -->
+        <!-- tab S -->
+    	<div class="demo-item" id="tab">
+            <div class="case-name">tab</div>
+            <div class="case-show">
+                <div class="content-hd" style="margin:0;">
+                    <div class="tab-nav"><a class="on" href="#">运行中</a><a href="#">已停止</a></div>
+                </div>
+            </div>
+            <div class="case-code">
+                <pre><div class="content-hd">
+    <div class="tab-nav"><a class="on" href="#">运行中</a><a href="#">已停止</a></div>
+</div></pre>
+            </div>
+        </div>
+        <!-- tab E -->
+        <!-- list S -->
+    	<div class="demo-item" id="list">
+            <div class="case-name">list</div>
+            <div class="case-show">
+                <div class="text-list">
+                    <dl>
+                        <dt>现金账户总额：</dt>
+                        <dd>10000.00元</dd>
+                    </dl>
+                    <dl>
+                        <dt>可用余额：</dt>
+                        <dd>8000.00元</dd>
+                    </dl>
+                    <dl>
+                        <dt>保证金余额：</dt>
+                        <dd>2000.00元</dd>
+                    </dl>
+                    <dl>
+                        <dt>未结算金额：</dt>
+                        <dd>1000.00元</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="case-code">
+                <pre><div class="text-list">
+    <dl>
+        <dt>现金账户总额：</dt>
+        <dd>10000.00元</dd>
+    </dl>
+    <dl>
+        <dt>可用余额：</dt>
+        <dd>8000.00元</dd>
+    </dl>
+    <dl>
+        <dt>保证金余额：</dt>
+        <dd>2000.00元</dd>
+    </dl>
+    <dl>
+        <dt>未结算金额：</dt>
+        <dd>1000.00元</dd>
+    </dl>
+</div>
+</pre></div>
+        </div>
+        <!-- list E -->
+        <!-- form S -->
+    	<div class="demo-item" id="form">
+            <div class="case-name">form</div>
+            <div class="case-show">
+                <div class="form-item">
+                    <div class="tips-guide" style="left:-47px"><i class="tips-ico-s ico-info-s"></i>请填写资料，以下信息绝对保密</div>
+                </div>
+                <div class="form-item">
+                    <label class="label" for="">姓名：</label>
+                    <span class="ipt-box ipt-box"><input class="ipt" name="" type="text"></span>
+                    <span class="tips-error">错误提示</span>
+                </div>
+                <div class="form-item">
+                    <label class="label" for="">住址：</label>
+                    <span class="taa-box"><textarea class="taa" name="" cols="" rows=""></textarea></span>
+                    <div class="tips-info">信息提示</div>
+                </div>
+                <div class="form-item">
+                    <label class="label" for="">生日：</label>
+                    <div class="datepicker">
+                        <span class="btn datepicker-switch"><input class="ipt" type="text"><i class="ico-date"></i></span>
+                        <span class="gap">年</span>
+                        <span class="btn datepicker-switch"><input class="ipt" type="text"><i class="ico-date"></i></span>
+                        <span class="gap">月</span>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="label" for="">户口：</label>
+                    <div class="dropdown-menu">
+                    <!-- 交互说明
+                         1.给样式"dropdown-menu"添加样式"open",显示下拉列表
+                    -->
+                        <a class="btn dropdown-switch" href="#"><label>请选择</label><i class="ico-arrow"></i></a>
+                        <ul class="dropdown-list">
+                            <li><a href="#">广东</a></li>
+                            <li><a href="#">河南</a></li>
+                            <li><a href="#">四川</a></li>
+                        </ul>
+                    </div>
+                    <span class="gap">省</span>
+                    <div class="dropdown-menu open">
+                    <!-- 交互说明
+                         1.给样式"dropdown-menu"添加样式"open",显示下拉列表
+                    -->
+                        <a class="btn dropdown-switch" href="#"><label>请选择</label><i class="ico-arrow"></i></a>
+                        <ul class="dropdown-list">
+                            <li><a href="#">汕头</a></li>
+                            <li><a href="#">潮州</a></li>
+                            <li><a href="#">揭阳</a></li>
+                        </ul>
+                    </div>
+                    <span class="gap">市</span>
+                </div>
+                <div class="form-item">
+                    <label class="label" for="">性别：</label>
+                    <label class="label-inline" for=""><i class="rdo rdo-on"></i>男</label>
+                    <label class="label-inline" for=""><i class="rdo"></i>女</label>
+                </div>
+                <div class="form-item">
+                    <label class="label" for="">爱好：</label>
+                    <label class="label-inline" for=""><i class="cbx cbx-on"></i>旅游</label>
+                    <label class="label-inline" for=""><i class="cbx cbx-on"></i>打球</label>
+                </div>
+                <div class="form-item">
+                    <a class="btn btn-primary" href="#">提交</a>
+                    <a class="btn btn-default" href="#">重置</a>
+                </div>
+            </div>
+            <div class="case-code">
+                <pre><div class="form-item">
+    <div class="tips-guide"><i class="tips-ico-s ico-info-s"></i>请如实填写资料，以下信息绝对保密</div>
+</div>
+<div class="form-item">
+    <label class="label" for="">姓名：</label>
+    <span class="ipt-box ipt-box"><input class="ipt" name="" type="text"></span>
+    <span class="tips-error">错误提示</span>
+</div>
+<div class="form-item">
+    <label class="label" for="">住址：</label>
+    <span class="taa-box"><textarea class="taa" name="" cols="" rows=""></textarea></span>
+    <div class="tips-info">信息提示</div>
+</div>
+<div class="form-item">
+    <label class="label" for="">生日：</label>
+    <div class="datepicker">
+        <span class="btn datepicker-switch"><input class="ipt" type="text"><i class="ico-date"></i></span>
+        <span class="gap">年</span>
+        <span class="btn datepicker-switch"><input class="ipt" type="text"><i class="ico-date"></i></span>
+        <span class="gap">月</span>
+    </div>
+</div>
+<div class="form-item">
+    <label class="label" for="">户口：</label>
+    <div class="dropdown-menu">
+    <!-- 交互说明
+         1.给样式"dropdown-menu"添加样式"open",显示下拉列表
+    -->
+        <a class="btn dropdown-switch" href="#"><label>请选择</label><i class="ico-arrow"></i></a>
+        <ul class="dropdown-list">
+            <li><a href="#">广东</a></li>
+            <li><a href="#">河南</a></li>
+            <li><a href="#">四川</a></li>
+        </ul>
+    </div>
+    <span class="gap">省</span>
+    <div class="dropdown-menu">
+    <!-- 交互说明
+         1.给样式"dropdown-menu"添加样式"open",显示下拉列表
+    -->
+        <a class="btn dropdown-switch" href="#"><label>请选择</label><i class="ico-arrow"></i></a>
+        <ul class="dropdown-list">
+            <li><a href="#">汕头</a></li>
+            <li><a href="#">潮州</a></li>
+            <li><a href="#">揭阳</a></li>
+        </ul>
+    </div>
+    <span class="gap">市</span>
+</div>
+<div class="form-item">
+    <label class="label" for="">性别：</label>
+    <label class="label-inline" for=""><i class="rdo rdo-on"></i>男</label>
+    <label class="label-inline" for=""><i class="rdo"></i>女</label>
+</div>
+<div class="form-item">
+    <label class="label" for="">爱好：</label>
+    <label class="label-inline" for=""><i class="cbx cbx-on"></i>旅游</label>
+    <label class="label-inline" for=""><i class="cbx cbx-on"></i>打球</label>
+</div>
+<div class="form-item">
+    <a class="btn btn-primary" href="#">提交</a>
+    <a class="btn btn-default" href="#">重置</a>
+</div></pre>
+<table class="table" style="margin-top:15px;text-align:left;">
+    <tr>
+        <td style="width:25px;"><span class="tips-ico-s ico-ok-s"></span></td>
+        <td><pre><span class="tips-ico-s ico-ok-s"></span></pre></td>
+    </tr>
+    <tr>
+        <td><span class="tips-ico-s ico-error-s"></span></td>
+        <td><pre><span class="tips-ico-s ico-error-s"></span></pre></td>
+    </tr>
+    <tr>
+        <td><span class="tips-ico-s ico-info-s"></span></td>
+        <td><pre><span class="tips-ico-s ico-info-s"></span></pre></td>
+    </tr>
+    <tr>
+        <td><span class="tips-ico-s ico-wait-s"></span></td>
+        <td><pre><span class="tips-ico-s ico-wait-s"></span></pre></td>
+    </tr>
+    <tr>
+        <td><span class="tips-ico-s ico-ques-s"></span></td>
+        <td><pre><span class="tips-ico-s ico-ques-s"></span></pre></td>
+    </tr>
+</table>
+            </div>
+        </div>
+        <!-- form E -->
+        <!-- button S -->
+    	<div class="demo-item" id="button">
+            <div class="case-name">button</div>
+            <div class="case-show">
+                <a class="btn btn-primary" href="#">主要按钮</a><a class="btn btn-default" href="#">辅助按钮</a><a class="btn btn-danger" href="#">警告按钮</a>
+            </div>
+            <div class="case-code">
+                <pre><a class="btn btn-primary" href="#">主要按钮</a>
+<a class="btn btn-default" href="#">辅助按钮</a>
+<a class="btn btn-danger" href="#">警告按钮</a></pre>
+            </div>
+        </div>
+        <!-- button E -->
+        <!-- popup S -->
+    	<div class="demo-item" id="popup">
+            <div class="case-name">popup</div>
+            <div class="case-show" style="height:200px;">
+                <div class="popup popup-top" style="top:41px;left:147px;">
+                    <p>开通商户号时系统会默认会为您生成初始的API密码，您也可以在本页面对API密码进行修改。</p>
+                    <span class="popup-arrow arrow-out"></span>
+                    <span class="popup-arrow arrow-in"></span>
+                </div>
+                <div class="popup popup-right" style="top:41px;left:429px;">
+                    <p>开通商户号时系统会默认会为您生成初始的API密码，您也可以在本页面对API密码进行修改。</p>
+                    <span class="popup-arrow arrow-out"></span>
+                    <span class="popup-arrow arrow-in"></span>
+                </div>
+                <div class="popup popup-bottom" style="top:150px;left:147px;">
+                    <p>开通商户号时系统会默认会为您生成初始的API密码，您也可以在本页面对API密码进行修改。</p>
+                    <span class="popup-arrow arrow-out"></span>
+                    <span class="popup-arrow arrow-in"></span>
+                </div>
+                <div class="popup popup-left" style="top:150px;left:429px;">
+                    <p>开通商户号时系统会默认会为您生成初始的API密码，您也可以在本页面对API密码进行修改。</p>
+                    <span class="popup-arrow arrow-out"></span>
+                    <span class="popup-arrow arrow-in"></span>
+                </div>
+            </div>
+            <div class="case-code">
+                <pre><div class="popup popup-top" style="top:200px;left:200px;">
+    <p>开通商户号时系统会默认会为您生成初始的API密码，您也可以在本页面对API密码进行修改。</p>
+    <span class="popup-arrow arrow-out"></span>
+    <span class="popup-arrow arrow-in"></span>
+</div>
+
+<div class="popup popup-right" style="top:200px;left:500px;">
+    <p>开通商户号时系统会默认会为您生成初始的API密码，您也可以在本页面对API密码进行修改。</p>
+    <span class="popup-arrow arrow-out"></span>
+    <span class="popup-arrow arrow-in"></span>
+</div>
+
+<div class="popup popup-bottom" style="top:200px;left:800px;">
+    <p>开通商户号时系统会默认会为您生成初始的API密码，您也可以在本页面对API密码进行修改。</p>
+    <span class="popup-arrow arrow-out"></span>
+    <span class="popup-arrow arrow-in"></span>
+</div>
+
+<div class="popup popup-left" style="top:200px;left:1100px;">
+    <p>开通商户号时系统会默认会为您生成初始的API密码，您也可以在本页面对API密码进行修改。</p>
+    <span class="popup-arrow arrow-out"></span>
+    <span class="popup-arrow arrow-in"></span>
+</div></pre>
+            </div>
+        </div>
+        <!-- popup E -->
+        <!-- dialog S -->
+    	<div class="demo-item" id="dialog">
+            <div class="case-name">dialog</div>
+            <div class="case-show">
+                <div class="dialog dialog-middle" style=" margin:0; position:static;">
+                    <div class="dialog-hd">
+                        <h3>提示</h3>
+                        <a class="cls" href="javascript:;">关闭</a>
+                    </div>
+                    <div class="dialog-bd">
+                    </div>
+                </div>
+            </div>
+            <div class="case-code">
+                <pre><div class="dialog dialog-middle" style="margin-top:-200px;">
+<div class="dialog-hd">
+    <h3>提示</h3>
+    <a class="cls" href="javascript:;">关闭</a>
+</div>
+<div class="dialog-bd"></div>
+</div></pre>
+            </div>
+        </div>
+        <!-- dialog E -->
+        <!-- table S -->
+    	<div class="demo-item" id="table">
+            <div class="case-name">table</div>
+            <div class="case-show">
+                <table class="table">
+                    <colgroup>
+                        <col class="c1"></col>
+                        <col class="c2"></col>
+                        <col class="c3"></col>
+                        <col class="c4"></col>
+                        <col class="c5"></col>
+                        <col class="c6"></col>
+                    </colgroup>
+                        <tr>
+                            <th>商户名</th>
+                            <th>商户号</th>
+                            <th>总交易笔数</th>
+                            <th>总交易金额</th>
+                            <th>成功交易笔数</th>
+                            <th>成功交易金额</th>
+                        </tr>
+                        <tr>
+                            <td>麦当劳</td>
+                            <td>123456789</td>
+                            <td>170</td>
+                            <td>25,781</td>
+                            <td>105</td>
+                            <td>21,863</td>
+                        </tr>
+                        <tr>
+                            <td>麦当劳</td>
+                            <td>123456789</td>
+                            <td>170</td>
+                            <td>25,781</td>
+                            <td>105</td>
+                            <td>21,863</td>
+                        </tr>
+                </table>
+            </div>
+            <div class="case-code">
+                <pre><table class="table">
+    <colgroup>
+        <col class="c1"></col>
+        <col class="c2"></col>
+        <col class="c3"></col>
+        <col class="c4"></col>
+        <col class="c5"></col>
+        <col class="c6"></col>
+    </colgroup>
+    <tr>
+        <th>商户名</th>
+        <th>商户号</th>
+        <th>总交易笔数</th>
+        <th>总交易金额</th>
+        <th>成功交易笔数</th>
+        <th>成功交易金额</th>
+    </tr>
+    <tr>
+        <td>麦当劳</td>
+        <td>123456789</td>
+        <td>170</td>
+        <td>25,781</td>
+        <td>105</td>
+        <td>21,863</td>
+    </tr>
+    <tr>
+        <td>麦当劳</td>
+        <td>123456789</td>
+        <td>170</td>
+        <td>25,781</td>
+        <td>105</td>
+        <td>21,863</td>
+    </tr>
+</table></pre>
+            </div>
+        </div>
+        <!-- table E -->
+        <!-- table S -->
+    	<div class="demo-item">
+            <div class="case-name">table</div>
+            <div class="case-show">
+                <table class="table table-vertical">
+                    <colgroup>
+                        <col class="c1"></col>
+                        <col class="c2"></col>
+                    </colgroup>
+                    <tr>
+                        <th>批次号</th>
+                        <td colspan="2">xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                        <th>名称</th>
+                        <td colspan="2">xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                        <th>面额</th>
+                        <td colspan="2">xxxxxxxx</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="case-code">
+                <pre><table class="table table-vertical">
+<colgroup>
+    <col class="c1"></col>
+    <col class="c2"></col>
+</colgroup>
+<tr>
+    <th>批次号</th>
+    <td colspan="2">xxxxxxxx</td>
+</tr>
+<tr>
+    <th>名称</th>
+    <td colspan="2">xxxxxxxx</td>
+</tr>
+<tr>
+    <th>面额</th>
+    <td colspan="2">xxxxxxxx</td>
+</tr>
+</table>
+</pre>
+            </div>
+        </div>
+        <!-- table E -->
+        <!-- pagination S -->
+    	<div class="demo-item" id="pagination">
+            <div class="case-name">pagination</div>
+            <div class="case-show">
+                <div class="pagination tl">
+                    <span class="page-area">
+                        <a href="#" class="btn page-first">首页</a>
+                        <a href="#" class="btn page-prev"><i class="ico-arrow"></i></a>
+                        <span class="page-num">
+                            <label>1</label>
+                            <span class="num-gap">/</span>
+                            <label>11</label>
+                        </span>
+                        <a href="#" class="btn page-next"><i class="ico-arrow"></i></a>
+                        <a href="#" class="btn page-last">尾页</a>           
+                    </span>
+                    <span class="goto-area">
+                        <input type="text">
+                        <a href="#" class="btn page-go">跳转</a>
+                    </span>
+                </div>
+            </div>
+            <div class="case-code">
+                <pre><div class="pagination">
+    <span class="page-area">
+        <a href="#" class="btn page-first">首页</a>
+        <a href="#" class="btn page-prev"><i class="ico-arrow"></i></a>
+        <span class="page-num">
+            <label>1</label>
+            <span class="num-gap">/</span>
+            <label>11</label>
+        </span>
+        <a href="#" class="btn page-next"><i class="ico-arrow"></i></a>
+        <a href="#" class="btn page-last">尾页</a>           
+    </span>
+    <span class="goto-area">
+        <input type="text">
+        <a href="#" class="btn page-go">跳转</a>
+    </span>
+</div></pre>
+            </div>
+        </div>
+        <!-- pagination E -->
+    </div>
+</div>
+<script src="js/js.js" type="text/javascript"></script>
+</body>
+</html>

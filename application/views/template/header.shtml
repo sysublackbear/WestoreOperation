@@ -1,0 +1,86 @@
+<!-- 头部 S -->
+<div class="header">
+    <div class="wrap">
+        <div class="logo"><a href="/index.php/account" target="_blank">微信商户平台</a></div>   
+        <div id="first-use" class="user hide">
+        	<span class="name">第一次使用微店平台?<a href="/WeStoreOperation/index.php/westore/register" target="_blank">  立刻进驻</a></span>
+        </div>
+        <div id="is-login" class="user">
+            <span class="avat"><a href="#"><img src="<?=base_url("/static/img/avatar.jpg")?>"></a></span>
+            <span class="name"><a name="header-nickname" target="_blank"  href="http://localhost/WeStoreOperation/index.php/westore/accountInfo"></a><i class="ico-service"></i></span><!-- "ico-service"服务号图标,"ico-subscribe"订阅号图标 -->
+            <span class="news"><a href="#"><i class="ico-mail"></i><i class="ico-spot"></i></a></span>
+            <span class="quit"><a href="http://localhost/WeStoreOperation/index.php/westore/logout">退出</a></span>
+        </div>
+        <div id="return-login" class="user hide">
+        	<span class="name"><a href="/WeStoreOperation/index.php/westore">  返回登录页</a></span>
+        </div>
+    </div>
+</div>
+
+<!-- 提示没有权限窗口 S -->
+<div class="dialog dialog-small hide" style="margin-top:-200px;" id="noAuthorityDialog">
+    <div class="dialog-hd">
+        <h3>权限提醒</h3>
+        <a class="cls close-dialog clsNoAuthorityDialog" href="javascript:;">关闭</a>
+    </div>
+    <div class="dialog-bd">
+        <div class="confirm tc">您没有权限进行此操作</div>
+        <div class="operation"><a class="btn btn-primary close-dialog clsNoAuthorityDialog" href="#">确认</a></div>
+    </div>
+</div>
+<!-- 提示没有权限窗口 E -->
+
+
+<!-- 错误提示窗口 S -->
+<div class="dialog dialog-small hide" style="margin-top:-200px;" id="errorAlertDialog">
+    <div class="dialog-hd">
+        <h3>错误提示</h3>
+        <a class="cls close-dialog clsErrorAlertDialog" href="javascript:;">关闭</a>
+    </div>
+    <div class="dialog-bd">
+        <div class="confirm tc jsErrorText"></div>
+        <div class="operation"><a class="btn btn-primary close-dialog clsErrorAlertDialog" href="#">确认</a></div>
+    </div>
+</div>
+<!-- 错误提示窗口 E -->
+
+<!-- 提示 S -->
+<div class="dialog dialog-small hide" style="margin-top:-200px;" id="ErrDg1">
+    <div class="dialog-hd">
+        <h3>提示</h3>
+        <a class="cls close-dialog jsCloseErrDg1" href="javascript:;">关闭</a>
+    </div>
+    <div class="dialog-bd">
+        <div class="tool-tips ">
+            <div class="tips-img"><i class="tips-ico ico-error"></i></div>
+            <div class="tips-con">
+                <p class="jsErrorText">系统繁忙，请稍后重试</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 提示 E -->
+
+<!-- 提示 S -->
+<div class="dialog dialog-middle hide" style="margin-top:-200px;" id="NoAuthDg">
+    <div class="dialog-hd">
+        <h3>提示</h3>
+        <a class="cls jsCloseNoAuthDg close-dialog" href="javascript:;">关闭</a>
+    </div>
+    <div class="dialog-bd">
+    
+        <div class="tool-tips ">
+            <div class="tips-img"><i class="tips-ico ico-warn"></i></div>
+            <div class="tips-con">
+                <h3>您没有此页面的查看操作权限，如有业务需要，请联系您的内部管理员协助开通。</h3>
+                <p class="jsNoAuthDgP">账户设置 - 密码安全 - API安全</p>
+                <p><a href="/index.php/account">进入账户概况</a></p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- 提示 E -->
+<script type="text/javascript" src="<?=base_url("/static/js/jquery.min.js")?>"></script>
+<script type="text/javascript" src="<?=base_url("/static/js/jquery.cookie.js")?>"></script>
+<script type="text/javascript" src="<?=base_url("/static/js/westore/template/westore.header.js")?>"></script>

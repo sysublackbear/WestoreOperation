@@ -1,0 +1,49 @@
+.ztree{padding:5px; background:#ffffff; border:1px solid #c3c3c3; height:300px; overflow:auto;}
+.ztree li{line-height:24px;white-space:nowrap;}
+.ztree li ul{padding:0 0 0 18px}
+.ztree li ul.line{background:url(../img/line_conn.gif) repeat-y;}
+.ztree li a{cursor:pointer;height:24px;color:#222222;display:inline-block;}
+.ztree li a:hover{text-decoration:underline;}
+/*.ztree li a.on{padding-top:0px;background-color:#FFE6B0;border:1px #FFB951 solid;}*/
+.ztree li span{line-height:16px;margin-right:2px}
+.ztree li .button{width:16px;height:16px;display:inline-block;vertical-align:middle;cursor:pointer;overflow:hidden;background-image:url(../img/ztree.png);}
+.ztree li .chk{width:13px;height:13px;margin:0 3px 0 0;cursor:auto;overflow:hidden;}
+.ztree li .checkbox-false-full{background-position:0 0}
+.ztree li .checkbox-false-full-focus{background-position:0 -14px}
+.ztree li .checkbox-false-part{background-position:0 -28px}
+.ztree li .checkbox-false-part-focus{background-position:0 -42px}
+.ztree li .checkbox-false-disable{background-position:0 -56px}
+.ztree li .checkbox-true-full{background-position:-14px 0}
+.ztree li .checkbox-true-full-focus{background-position:-14px -14px}
+.ztree li .checkbox-true-part{background-position:-14px -28px}
+.ztree li .checkbox-true-part-focus{background-position:-14px -42px}
+.ztree li .checkbox-true-disable{background-position:-14px -56px}
+.ztree li .radio-false-full{background-position:-28px 0}
+.ztree li .radio-false-full-focus{background-position:-28px -14px}
+.ztree li .radio-false-part{background-position:-28px -28px}
+.ztree li .radio-false-part-focus{background-position:-28px -42px}
+.ztree li .radio-false-disable{background-position:-28px -56px}
+.ztree li .radio-true-full{background-position:-42px 0}
+.ztree li .radio-true-full-focus{background-position:-42px -14px}
+.ztree li .radio-true-part{background-position:-42px -28px}
+.ztree li .radio-true-part-focus{background-position:-42px -42px}
+.ztree li .radio-true-disable{background-position:-42px -56px}
+.ztree li .switch{width:18px;height:18px}
+.ztree li .root-open{background-position:-92px -54px}
+.ztree li .root-close{background-position:-74px -54px}
+.ztree li .roots-open{background-position:-92px 0}
+.ztree li .roots-close{background-position:-74px 0}
+.ztree li .center-open{background-position:-92px -18px}
+.ztree li .center-close{background-position:-74px -18px}
+.ztree li .bottom-open{background-position:-92px -36px}
+.ztree li .bottom-close{background-position:-74px -36px}
+.ztree li .noline-open{background-position:-92px -72px}
+.ztree li .noline-close{background-position:-74px -72px}
+.ztree li .root-docu{background:none;}
+.ztree li .roots-docu{background-position:-56px 0}
+.ztree li .center-docu{background-position:-56px -18px}
+.ztree li .bottom-docu{background-position:-56px -36px}
+.ztree li .noline-docu{ background:none;}
+.ztree li .ico-open{margin-right:2px;background-position:-110px -16px;}
+.ztree li .ico-close{margin-right:2px;background-position:-110px 0;}
+.ztree li .ico-docu{margin-right:2px;background-position:-110px -32px;}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>页面提示 - 微信商户平台</title>
+<link rel="stylesheet" href="<?=base_url("/static/css/global_min.css")?>" />
+<link rel="shortcut icon" href="<?=base_url("/static/core/favicon.ico")?>" type="image/x-icon"/>
+</head>
+
+<body class="page-tips">
+
+<!-- 头部 S -->
+<?php require_once("/template/header.shtml"); ?>
+<!-- 头部 E -->
+
+<!-- 内容 S -->
+<div class="container">
+    <div class="wrap body body-bg">
+        <!-- 主区域 S -->
+        <div class="page-error">
+        	<i class="ico-face"></i>
+            <p>你是不是走错地方了?<a href="<?=base_url("index.php/westore/help")?>">返回</a>请按这里。</p>
+            <p class="hide">不好意思，我们不支持ie6内核的浏览器。请升级你的ie内核或者使用其他浏览器。</p>
+        </div>
+        <!-- 主区域 E -->
+    </div>
+
+</div>
+<!-- 内容 E -->
+
+<!-- 底部 S -->
+<?php require_once("/template/footer.shtml"); ?>
+<!-- 底部 E -->
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>导航页 - 微信商户平台</title>
+<link rel="stylesheet" href="<?=base_url("/static/css/global_min.css")?>" />
+<link rel="shortcut icon" href="<?=base_url("/static/core/favicon.ico")?>" type="image/x-icon"/>
+</head>
+
+<body class="help">
+<!-- 头部 S -->
+<?php require_once("/template/header.shtml"); ?>
+<!-- 头部 E -->
+
+<!-- 内容 S -->
+<div class="container">
+    <div class="wrap body">
+    <!-- 侧边栏 S -->
+    <?php $this->load->view('template/left.shtml'); ?>
+    <!-- 侧边栏 E -->
+
+    <!-- 主区域 S -->
+    <div class="content">
+        <div class="content-hd">
+            <div class="tit-nav">帮助导航</div>
+        </div>
+        <div class="content-bd">
+            <div class="moda">
+                    <div class="moda-hd">
+                        <h2>资金流\账户体系说明</h2>
+                    </div>
+                    <div class="moda-bd">
+                        <p>通过微信支付产生的交易，会按照约定的结算周期和费率进行结算，结算后自动提现至结算</p>            
+                        <p>账户（企业银行账户）</p>  
+                        <p class="hide"><img src="img/help/Account.jpg" alt="账户" /></p>           
+                    </div>
+                </div> 
+            <div class="moda hide">
+                    <div class="moda-hd">
+                        <h2>登录</h2>
+                    </div>
+                     <div class="moda-bd">
+                        <p>
+                        申请开通微信支付后，您会收到一封开户邮件中，请使用开户邮件中的登录名和密码，登录mch.weixin.qq.com进行访问（开户邮件提供的是超级管理员的登录帐号跟密码；商户可以到员工管理添加员工帐号，员工再通过自己的员工帐号&密码登录）。
+                        </p>            
+                        <p class="hide"><img src="img/help/login.jpg" alt="账户" /></p>           
+                    </div>
+                    </div>
+            <div class="moda">
+                <div class="moda-hd">
+                            <h2>交易订单</h2>
+                        </div>
+                <div class="moda-bd">
+                            <p>您可以进行批量订单查询或者按订单号查询</p> 
+                            <h5>批量订单查询</h5>  
+                                <p>选择你要查询的交易时间、支付场景、交易状态、交易金额范围，点击“查询”开始查询</p>
+                                <p class="hide"><img src="img/help/Bulk.jpg" alt="批量订单查询" /></p>  
+                                <p>点击查询后出现查询结果列表，点击查看可以查看此笔交易的详细信息</p> 
+                                <p class="hide"><img src="img/help/Bulk_list.png" alt="批量订单查询" /></p>           
+                                <p class="hide"><img src="img/help/Bulk_d.jpg" alt="批量订单查询" /></p>    
+                                <p>交易状态解释：</p> 
+                                <p>1、待买家支付——买家还未完成支付</p> 
+                                <p>2、订单已关闭——订单已作废（买家还未完成支付）</p> 
+                                <p>3、买家已支付——买家已完成支付</p> 
+                                <p>4、交易结束——交易已完成</p> 
+                                <p>5、全额退款——已将订单的全额退还给用户</p> 
+                            
+                            
+                            <h5>按订单号查询</h5>  
+                                <p>输入订单的微信支付订单号或者商户订单号可以查询到某笔订单</p>
+                                <p class="hide"><img src="img/help/order.jpg" alt="按订单号查询" /></p>    
+                        </div>
+            </div>
+            <div class="moda hide">
+                <div class="moda-hd">
+                    <h2>交易退款</h2>
+                </div>
+                <div class="moda-bd">
+                    <p>您可以通过查询交易订单发起退款申请或者按订单号申请退款</p>
+                    <p>查询交易订单发起退款：</p>
+                    <p class="hide"><img src="img/help/refund.jpg" alt="查询交易订单发起退款" /></p>  
+                    <p>按订单号申请退款</p>
+                    <p class="hide"><img src="img/help/refunds.jpg" alt="按订单号申请退款" /></p>  
+                    
+                    <h3>申请退款</h3>  
+                        <p>填写信息即可申请退款，可以申请全额退款也可以部分退款。如果申请部分退款，那么此笔订单可以进行多次退款申请。审核通过后会从当日的交易中扣除退款，款项将原路退还给用户（用户使用零钱支付就退到零钱，使用银行卡支付则退款到银行卡中）</p>
+                        <p class="hide"><img src="img/help/refund_s.jpg" alt="申请退款" /></p>    
+                        <p>如果配置了退款审核（在审核管理中可以配置），那么申请退款后会进入审核流程，审核通过，进行退款操作</p>
+                        <p class="hide"><img src="img/help/refund_d.jpg" alt="申请退款" /></p>    
+                    
+                    <h3>退款查询</h3>  
+                        <p>您可以按时间查询退款，也可以按交易单号进行查询</p>
+                        <p class="hide"><img src="img/help/refund_sel.jpg" alt="按订单号查询" /></p>    
+                    
+                    <h3>退款审核</h3>  
+                        <p>登录账号在退款审核人员名单中时，在退款审核中可以看见待审核的退款单</p>
+                        <p class="hide"><img src="img/help/refund_audit.jpg" alt="按订单号查询" /></p> 
+                </div>
+            </div> 
+        
+            <div class="moda hide">
+                <div class="moda-hd">
+                    <h2>结算查询</h2>
+                </div>
+                <div class="moda-bd">
+                    <h3>已结算查询</h3>  
+                    <p>结算后，会通过银行打款将划账金额自动提现到商户的结算账户，划账金额从结算日起1到3个工作日到账，结算起点为人民币500元，如未达到结算起点，该周期的结算款累积到下一结算周期，普通商户每周结算一次，周六、周日及国家法定节假日不进行结算</p>
+                    <p class="hide"><img src="img/help/Settled.jpg" alt="已结算查询" /></p>  
+                    <p>计算公式如下：</p> 
+                    <p>结算划账金额（结算银行账户实际到账金额） = 交易支付净额 — 结算手续费</p>
+                    <p>交易支付净额 = 支付总金额 — 退款总金额</p>
+                    <p>结算手续费 = 交易支付净额 * 费率</p>
+                    <p class="hide"><img src="img/help/Settled_01.jpg" alt="批量订单查询" /></p>           
+                    <h3>未结算查询</h3>
+                    <p>未结算查询中可以查询到未结算的交易款</p>
+                    <p class="hide"><img src="img/help/Settled_02.jpg" alt="批量订单查询" /></p>    
+                </div>
+            </div> 
+            <div class="moda hide">
+                          <div class="moda-hd">
+                            <h2>对账单管理</h2>
+                        </div>
+                             <div class="moda-bd">
+                                <p>对账单管理中你可以下载对账单</p>
+                                <p class="hide"><img src="img/help/bill.jpg" alt="下载对账单" /></p> 
+                                <p class="hide"><img src="img/help/bill_01.jpg" alt="下载对账单" /></p> 
+                            </div>
+                       </div>
+            <div class="moda hide">
+                    <div class="moda-hd">
+                        <h2>Q&A </h2>
+                    </div> 
+                    <div class="moda-bd">
+                    <h5>1、手续费是什么时候扣除的？ 对账单里会有费率的数据吗？</h5>  
+                    <p>结算时扣除，结算银行账户实际到账金额已经扣除手续费了。对账单里会有费率以及每笔交易手续费等数据。</p>
+                    <p>2、退款是否需要审核？</p>  
+                    <p>退款审核可以进行配置，配置了审核，那么退款需要经过退款审核人员的审核，没有配置则不用审核</p> 
+                    <p>3、划账金额计算公式？</p>
+                    <p>结算划账金额（结算银行账户实际到账金额） = 交易支付净额 — 结算手续费</p>
+                    <p>交易支付净额 = 支付总金额 — 退款总金额</p>
+                    <p>结算手续费 = 交易支付净额 * 费率</p>           
+                    <p>4、企业银行账户如何变更？</p>
+                    <p>企业银行账户是在您申请微信支付的时填写的，如果需要变更，请按格式填写好，邮件至小助手邮箱（<a href="mailto:weixinpay@tencent.com">weixinpay@tencent.com</a>），经微信团队审核后可以变更</p> 
+                    <p>【邮件内容】</p>   
+                    <p>主题：</p>   
+                    <p>微信号+名称，及“申请结算账户信息”字样</p>   
+                    <p>【邮件内容】</p>   
+                    <p>1）微信公众平台登录帐号：</p>
+                    <p>2）公众帐号名称：</p>
+                    <p>3）公众平台微信帐号：</p>
+                    <p>4）原负责人姓名：</p>
+                    <p>5）原联系电话：</p>
+                    <p>6）原重要邮箱：</p>
+                    <p>7）需要修改的信息：</p>
+                    <p>8）修改原因：</p>
+                    <p>请微信团队审核处理，谢谢！</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- 主区域 E -->
+    </div>
+    
+    <!-- 客服区 S -->
+    <div class="kefu">
+        <p class="link"><a href="#" target="_blank">在线客服</a>|<a href="#" target="_blank">客服中心</a></p>
+        <p class="tail">反馈官号：weixinshanghu</p>
+    </div>
+    <!-- 客服区 E -->
+
+</div>
+<!-- 内容 E -->
+
+<!-- 底部 S -->
+<?php require_once("/template/footer.shtml"); ?>
+<!-- 底部 E -->
+
+</body>
+</html>

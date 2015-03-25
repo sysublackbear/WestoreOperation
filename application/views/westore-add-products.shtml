@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>新增商品 - 微信商户平台</title>
+<link rel="stylesheet" href="<?=base_url("/static/css/global_min.css")?>" />
+<link rel="stylesheet" href="<?=base_url("/static/css/jquery.datetimepicker.css")?>" />
+<link rel="shortcut icon" href="<?=base_url("/static/core/favicon.ico")?>" type="image/x-icon"/>
+</head>
+
+<body class="hongbao-create">
+
+<!-- 头部 S -->
+<?php require_once("/template/header.shtml"); ?>
+<!-- 头部 E -->
+
+<!--弹出背景层S-->
+<div class="backGround"></div>
+<!--弹出背景层E-->
+
+<!-- 内容 S -->
+<div class="container">
+    <div class="wrap body">
+        
+        <!-- 侧边栏 S -->
+        <?php $this->load->view('template/left.shtml'); ?>
+        <!-- 侧边栏 E -->
+        
+        <!-- 主区域 S -->
+        <div class="content">
+            <div class="content-hd">新建商品库存</div>
+            <div class="content-bd">
+                <div class="process-bar">
+                    <!-- 交互说明，切换li的class：
+                         1.根据步骤数添加样式size+n（n为步骤数）
+                         2.当前为on，前一个为prev，前一个之前的都为pprev，后一个为next，后一个之后的都为nnext，最后一个加last
+                    -->
+                    <ul>
+                        <li class="size4 on"><span>配置商品信息</span></li>
+                    </ul>
+                </div>
+                
+                <!-- 配置商品信息 S -->   
+                <div class="moda">
+                    <div class="alert-tips">
+                        <p>注意本页的必填项内容。</p>
+                    </div>
+                    <div class="moda mb wechat-prev-fl">
+                        <div class="moda-bd">
+                            <div class="form-item">
+                                <label class="label" for="">上传商品图片：</label>
+                                <div class="file-upload">
+                                    <div class="tips-info">上传图片格式为png，小于30kb，最佳尺寸：303px*251px</div>
+                                    <div class="upload-button"><input name="productPicture" id="productPicture" class="ipt" type="file" placeholder=""></div>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">商品名称：</label>
+                                <span class="ipt-box ipt-box"><input name="productName" class="ipt" type="text" placeholder="少于10个汉字，含标点符号"></span>
+                            	<span name="productNameAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">商品条码：</label>
+                                <span class="ipt-box ipt-box"><input name="productCode" class="ipt" type="text" placeholder="由英文和数字组成"></span>
+                            	<span name="productCodeAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">商品单价：</label>
+                                <span class="ipt-box ipt-box"><input name="unitPrice" class="ipt"  type="text" placeholder="请填写金额"></span> 元
+                            	<span name="unitPriceAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">库存数量：</label>
+                                <span class="ipt-box ipt-box"><input class="ipt" name="inventory" type="text" placeholder="请填写库存数量"></span>
+                            	<span name="inventoryAlert" class="tips-error hide"></span>
+                            </div>
+                            <div class="form-item">
+                                    <label class="label" for="">商品状态：</label>
+                                    <div name="productStatusList" class="dropdown-menu">
+                                    <!-- 交互说明
+                                    1.给样式"dropdown-menu"添加样式"open",显示下拉列表
+                                    -->
+                                        <a class="btn dropdown-switch" href="#"><label name="productStatus">线上</label><i class="ico-arrow"></i></a>
+                                        <ul class="dropdown-list">
+                                        	<li><a href="#">线上</a></li>
+                                            <li><a href="#">促销</a></li>
+                                            <li><a href="#">下架</a></li>
+                                        </ul>
+                                    </div>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">商品备注：</label>
+                                <span class="taa-box"><textarea class="taa" name="productRemark" cols="" rows="" placeholder="少于512个字符"></textarea></span>
+                            </div>
+                            <div class="form-item"><a name="addProducts" class="btn btn-primary" href="##">添加</a><a name="productsAddCancel" class="btn btn-default" href="##">取消</a></div> 
+                        </div>
+                    </div>
+                </div>
+                <!-- 配置商品信息 E -->
+                
+                <!-- 配置完成 S -->        
+                <div id="insertFinish" class="dialog dialog-middle hide" style="margin-top:-200px;">
+                	<div class="dialog-hd">
+                		<h3>添加成功</h3>
+                		<a class="cls" name="closeInsertFinish" href="javascript:;">关闭</a>
+                	</div>
+                	<div class="dialog-bd ">
+                		<div class="tool-tips tool-left">
+                			<div class="tips-img"><i class="tips-ico ico-ok"></i></div>
+                			<div class="tips-con">
+                				<h3>添加商品成功！</h3>
+                				<div class="opt"><a class="btn btn-primary" name="InsertProductsConfirm" href="#">确定</a></div>
+                			</div>
+               			</div>
+  					</div>        
+                <!-- 配置完成 E -->
+
+            </div>
+        </div>
+        <!-- 主区域 E -->
+
+    </div>
+    
+
+</div>
+<!-- 内容 E -->
+
+<!-- 底部 S -->
+<?php require_once("/template/footer.shtml"); ?>
+<!-- 底部 E -->
+
+</body>
+
+<script type="text/javascript" src="<?=base_url("/static/js/ajaxfileupload.js")?>"></script>
+<script type="text/javascript" src="<?=base_url("/static/js/westore/products/westore.add.products.js")?>"></script>
+</html>

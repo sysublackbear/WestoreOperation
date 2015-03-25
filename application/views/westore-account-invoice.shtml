@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>发票信息 - 微信商户平台</title>
+<link rel="stylesheet" href="<?=base_url("/static/css/global_min.css")?>" />
+<link rel="stylesheet" href="<?=base_url("/static/css/jquery.datetimepicker.css")?>" />
+<link rel="shortcut icon" href="<?=base_url("/static/core/favicon.ico")?>" type="image/x-icon"/>
+</head>
+
+<body class="account-invoice">
+
+<!-- 头部 S -->
+<?php require_once("/template/header.shtml"); ?>
+<!-- 头部 E -->
+
+<!--弹出背景层S-->
+<div class="backGround"></div>
+<!--弹出背景层E-->
+
+<!-- 内容 S -->
+<div class="container">
+    <div class="wrap body">
+        
+        <!-- 侧边栏 S -->
+        <?php $this->load->view('template/left.shtml'); ?>
+        <!-- 侧边栏 E -->
+        
+        <!-- 主区域 S -->
+        <div class="content">
+            <div class="content-hd">
+                <div class="tab-nav"><a href="./accountInfo">账户资料</a><a class="on" href="./accountInvoice">发票信息</a></div>
+            </div>
+            <div class="content-bd">
+            
+                <div class="">
+                    <div class="moda mb">
+                        <div class="moda-hd">
+                            <h2>发票开具类型</h2>
+                        </div>
+                        <div class="moda-bd">
+                            <div class="form-item">
+                                <label class="label" for="">纳税人类型：</label>
+                                <label class="label-inline" for=""><i class="rdo rdo-on"></i>增值税一般纳税人，拥有资质证明</label>
+                                <label class="label-inline" for=""><i class="rdo"></i>非增值税一般纳税人</label>
+                            </div>
+                            <div class="">
+                                <div class="form-item">
+                                    <label class="label" for="">开票类型：</label>
+                                    <span>增值税发票</span>
+                                </div>
+                            </div>
+                            <div class="hide">
+                                <div class="form-item">
+                                    <label class="label" for="">开票类型：</label>
+                                    <span>通用机打发票</span>
+                                </div>
+                                <div class="form-item">
+                                    <label class="label" for="">商户类型：</label>
+                                    <label class="label-inline" for=""><i class="rdo"></i>个人</label>
+                                    <label class="label-inline" for=""><i class="rdo rdo-on"></i>公司</label>
+                                </div> 
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="moda">
+                        <div class="moda-hd">
+                            <h2>发票开具信息</h2>
+                            <div class="invoice-demo">
+                                <i class="tips-ico-s ico-info-s"></i>
+                                <div class="popup popup-left">
+                                    发票开具信息对应示例如下：
+                                    <img src="<?=base_url("/static/img/images/demo/invoice.jpg")?>" alt="发票开具信息对应示例">
+                                    <span class="popup-arrow arrow-out"></span>
+                                    <span class="popup-arrow arrow-in"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="moda-bd">
+                        
+                            <!-- 增值税一般纳税人，拥有资质证明 S -->
+                            <div class="">
+                                <div class="form-item">
+                                    <label class="label" for="">公司名称（开票抬头）：</label>
+                                    <span class="ipt-box"><input class="ipt" name="" type="text"></span>
+                                    <div class="tips-info">必须与税务登记证上的公司名称一致</div>
+                                </div>
+                                <div class="form-item">
+                                    <label class="label" for="">纳税人识别号：</label>
+                                    <span class="ipt-box"><input class="ipt" name="" type="text"></span>
+                                    <div class="tips-info">即税务登记证上的号码，每个企业的识别号都是唯一的</div>
+                                    <div class="tax-reg">
+                                        <div class="form-item">
+                                            <div class="tips-guide">请填写税务登记证详细信息并上传扫描件，提供纳税人识别号资质核实</div>
+                                        </div>
+                                        <div class="form-item">
+                                            <label class="label" for="">税务登记证有效期：</label>
+                                            <div class="datepicker">
+                                                <span class="btn datepicker-switch"><input class="ipt" name="startdate" type="text" style="ime-mode:disabled" placeholder="请选择"><i class="ico-date"></i></span>
+                                                <span class="gaps">至</span>
+                                                <span class="btn datepicker-switch"><input class="ipt" name="enddate" type="text" style="ime-mode:disabled" placeholder="请选择"><i class="ico-date"></i></span>
+                                            </div>
+                                            <label class="label-inline gap" for=""><input type="checkbox" />长期</label>
+                                            <div class="tips-info">起始时间为证件的发放日期，如税务登记证无结束日期，请勾选长期</div>
+                                        </div>
+                                        <div class="form-item">
+                                            <label class="label" for="">税务登记证：</label>
+                                            <div class="file-upload">
+                                            <div class="tips-info">国税、地税正本或副本，上传其中一个即可<br/>请复印到一张A4纸上，并请务必加盖公司公章。建议使用彩色扫描<br/>文件大小不超过2M，文件格式为bmp、jepg、jpg或gif</div>
+                                                <div class="upload-button"><input class="ipt" type="file" placeholder="上传文件"></div>
+                                                <div class="upload-preview"><a href="#"><img src="<?=base_url("/static/img/images/demo/invoice.jpg")?>" alt=""></a><a href="#"><img src="<?=base_url("/static/img/images/demo/invoice.jpg")?>" alt=""></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <label class="label" for="">公司地址：</label>
+                                    <span class="ipt-box"><input class="ipt" name="" type="text"></span>
+                                </div>
+                                <div class="form-item">
+                                    <label class="label" for="">公司电话：</label>
+                                    <span class="ipt-box"><input class="ipt" name="" type="text"></span>
+                                </div>
+                                <div class="form-item">
+                                    <label class="label" for="">开户银行：</label>
+                                    <span class="ipt-box"><input class="ipt" name="" type="text"></span>
+                                    <div class="tips-info">如：招商银行广东省深圳市**支行</div>
+                                </div>
+                                <div class="form-item">
+                                    <label class="label" for="">开户银行帐号：</label>
+                                    <span class="ipt-box"><input class="ipt" name="" type="text"></span>
+                                </div>
+                            </div>
+                            <!-- 增值税一般纳税人，拥有资质证明 E -->
+                            
+                            <!-- 非增值税一般纳税人 S -->
+                            <div class="hide">
+                                <div class="">
+                                    <div class="form-item">
+                                        <label class="label" for="">公司名称（开票抬头）：</label>
+                                        <span class="ipt-box"><input class="ipt" name="" type="text"></span>
+                                        <div class="tips-info">必须与税务登记证上的公司名称一致</div>
+                                    </div>
+                                    <div class="form-item form-btn">
+                                        <label class="label" for="">营业执照：</label>
+                                        <div class="file-upload">
+                                            <div class="tips-info">请上传加盖公章的营业执照副本扫描件<br/>文件大小不超过2M，文件格式为bmp、jepg、jpg或gif</div>
+                                            <div class="upload-button"><input class="ipt" type="file" placeholder="上传文件"></div>
+                                            <div class="upload-preview"><a href="#"><img src="<?=base_url("/static/img/images/demo/invoice.jpg")?>" alt=""></a><a href="#"><img src="<?=base_url("/static/img/images/demo/invoice.jpg")?>" alt=""></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="">
+                                    <div class="form-item">
+                                        <label class="label" for="">个人名称（开票抬头）：</label>
+                                        <span>张三</span>
+                                        <div class="tips-info">以您的注册人姓名作为开票抬头</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 非增值税一般纳税人 E -->
+                        </div>
+                    </div>
+                    
+					<div class="moda mb">
+                        <div class="moda-hd">
+                            <h2>发票寄送信息</h2>
+                        </div>
+                        <div class="moda-bd">
+                            <div class="form-item">
+                                <label class="label" for="">收件人姓名：</label>
+			    		    	<span class="ipt-box"><input class="ipt" name="" type="text"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">收件人电话：</label>
+			    		    	<span class="ipt-box"><input class="ipt" name="" type="text"></span>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">收件地址：</label>
+			    		    	<span class="ipt-box"><input class="ipt" name="" type="text"></span>
+                            </div>                            
+                            <div class="form-item">
+                                <label class="label" for="">邮编：</label>
+			    		    	<span class="ipt-box"><input class="ipt" name="" type="text"></span>
+                            </div>                            
+                        </div>
+                    </div>
+					<div class="form-item form-btn"><a class="btn btn-primary" href="#">提交</a><a class="btn btn-default" href="#">取消</a></div>
+                </div>
+                
+                <!-- 修改完成 S -->        
+                <div id="registerFinish" class="dialog dialog-middle hide" style="margin-top:-200px;">
+                	<div class="dialog-hd">
+                		<h3>注册成功</h3>
+                		<a class="cls" name="closeRegisterFinish" href="javascript:;">关闭</a>
+                	</div>
+                	<div class="dialog-bd ">
+                		<div class="tool-tips tool-left">
+                			<div class="tips-img"><i class="tips-ico ico-ok"></i></div>
+                			<div class="tips-con">
+                				<h3>你已成功注册!即将为你跳转到主页面......</h3>
+                				<div class="opt"><a class="btn btn-primary" href="#">确定</a></div>
+                			</div>
+               			</div>
+  					</div>        
+                <!-- 修改完成 E -->
+                
+            </div>
+        </div>
+        <!-- 主区域 E -->
+
+    </div>
+
+</div>
+<!-- 内容 E -->
+
+<!-- 底部 S -->
+<?php require_once("/template/footer.shtml"); ?>
+<!-- 底部 E -->
+
+</body>
+
+<script type="text/javascript" src="<?=base_url("/static/js/jquery.datetimepicker.js")?>"></script>
+<script type="text/javascript" src="<?=base_url("/static/js/westore/account/westore.account.invoice.js")?>"></script>
+</html>

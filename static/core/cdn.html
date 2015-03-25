@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8"/>
+    <title>cdn</title>
+</head>
+<body>
+<link rel="stylesheet" href="http://wx.gtimg.com/core/404.css" type="text/css" media="screen" />
+<script type="text/javascript" src="http://wx.gtimg.com/core/404.js" charset="utf-8"></script>
+<img src="http://wx.gtimg.com/core/404.png" alt="logo">
+<!-- 1、验证是否从缓存读取：期望读缓存 -->
+<link rel="stylesheet" href="http://wx.gtimg.com/core/404.css" type="text/css" media="screen" />
+<script type="text/javascript" src="http://wx.gtimg.com/core/404.js" charset="utf-8"></script>
+<img src="http://wx.gtimg.com/core/404.png" alt="logo">
+<!-- 2、验证打标之后读缓存还是重新拉取：期望重新拉取 -->
+<link rel="stylesheet" href="http://wx.gtimg.com/core/404.css?t=999" type="text/css" media="screen" />
+<script type="text/javascript" src="http://wx.gtimg.com/core/404.js?t=999" charset="utf-8"></script>
+<img src="http://wx.gtimg.com/core/404.png?t=999" alt="logo">
+<!-- 3、验证打标之后是否可以缓存：期望读缓存 -->
+<link rel="stylesheet" href="http://wx.gtimg.com/core/404.css?t=999" type="text/css" media="screen" />
+<script type="text/javascript" src="http://wx.gtimg.com/core/404.js?t=999" charset="utf-8"></script>
+<img src="http://wx.gtimg.com/core/404.png?t=999" alt="logo">
+<!-- 4、加上随机值之后读缓存还是重新拉取：期望重新拉取 -->
+<script>
+document.write('<link rel="stylesheet" href="http://wx.gtimg.com/core/404.css?t='+Math.random()+'" type="text/css" media="screen" />');
+document.write('<script type="text/javascript" src="http://wx.gtimg.com/core/404.js?t='+Math.random()+'" charset="utf-8"><\/script>');
+document.write('<img src="http://wx.gtimg.com/core/404.png?t='+Math.random()+'" alt="logo">');
+</script>
+</script>
+</body>
+</html>

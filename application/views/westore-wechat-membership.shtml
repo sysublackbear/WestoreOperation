@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>我的会员 - O2O微店平台</title>
+<link rel="stylesheet" href="<?=base_url("/static/css/global_min.css")?>" />
+<link rel="stylesheet" href="<?=base_url("/static/css/jquery.datetimepicker.css")?>" />
+<link rel="stylesheet" href="<?=base_url("/static/css/lightbox.css")?>" />
+<link rel="shortcut icon" href="<?=base_url("/static/core/favicon.ico")?>" type="image/x-icon"/>
+
+<script type="text/javascript" src="<?=base_url("/static/js/template.js")?>"></script>
+</head>
+
+<body class="online-products">
+
+<!--头部S-->
+<?php require_once("/template/header.shtml"); ?>
+<!--头部E-->
+
+<!-- 内容 S -->
+<div class="container">
+<div class="wrap body">
+        
+        <!-- 侧边栏 S -->
+        <?php $this->load->view('template/left.shtml'); ?>
+        <!-- 侧边栏 E -->
+        
+<!-- 主区域 S -->
+<div class="content">
+            <div class="content-hd">
+                <div class="tit-nav"><?php echo $title; ?></div>
+            </div>
+            <div class="content-bd">
+                <div class="moda">
+                    <div class="moda-hd">
+                        <h2><?php echo $secondTitle; ?></h2>
+                    </div>
+                    <div class="moda-bd">
+                        <div class="query-panel">
+                        	<div class="form-group">
+                       			<div class="form-item">
+                                    	<label class="label" for="">微信公众号：</label>
+                                    	<span class="ipt-box ipt-box"><input class="ipt" name="wechatPublicNumber" type="text" placeholder="请输入微信公众号"></span>
+                                		<span name="wechatMembershipAlert" class="tips-error hide"></span>
+                                </div>
+                       			<div class="form-item form-btn"><a name="fansUpdate" class="btn btn-default hide" href="#">同步微信粉丝</a></div>
+                       		</div>
+                       		<div class="form-group">
+                       			<div class="form-item">
+                                    	<label class="label" for="">微信昵称：</label>
+                                    	<span class="ipt-box ipt-box"><input class="ipt" name="wechatUserName" type="text" placeholder="请输入微信昵称"></span>
+                                	</div>
+                       			<div class="form-item form-btn"><a name="wechatMembershipQuery" class="btn btn-primary" href="#">查找</a></div>
+                       		</div>
+                       	</div>
+                          <div class="query-panel hide">
+                            <div class="form-item">
+                                <label class="label" for=""><span class="red">*</span>开始时间：</label>
+                                <div class="datepicker">
+                                    <span class="btn datepicker-switch"><input class="ipt" type="text" style="ime-mode:disabled"><i class="ico-date"></i></span>
+                                    <span class="gaps">到</span>
+                                    <span class="btn datepicker-switch"><input class="ipt" type="text" style="ime-mode:disabled"><i class="ico-date"></i></span>
+                                    <a href="#" class="gaps">最近1天</a>   <a href="#" class="gaps">最近3天</a>  <a href="#" class="gaps">最近7天</a>  <a href="#" class="gaps">本周</a>
+                                </div>
+                                <span class="tips-error">请选择查询时间</span>
+                                <div class="tips-info">时间跨度最多支持31天</div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-item">
+                                    <label class="label" for="">账务类型：</label>
+                                    <div class="dropdown-menu">
+                                    <!-- 交互说明
+                                    1.给样式"dropdown-menu"添加样式"open",显示下拉列表
+                                    -->
+                                        <a class="btn dropdown-switch" href="#"><label>交易及退款</label><i class="ico-arrow"></i></a>
+                                        <ul class="dropdown-list">
+                                            <li><a href="#">交易及退款</a></li>
+                                            <li><a href="#">交易款项提现</a></li>
+                                            <li><a href="#">服务费</a></li>
+                                            <li><a href="#">充值</a></li>
+                                            <li><a href="#">可用余额提现</a></li>
+                                            <li><a href="#">转账</a></li>
+                                            <li><a href="#">营销资源</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <label class="label" for="">入账类型：</label>
+                                    <div class="dropdown-menu">
+                                    <!-- 交互说明
+                                    1.给样式"dropdown-menu"添加样式"open",显示下拉列表
+                                    -->
+                                        <a class="btn dropdown-switch" href="#"><label>所有类型</label><i class="ico-arrow"></i></a>
+                                        <ul class="dropdown-list">
+                                            <li><a href="#">收入</a></li>
+                                            <li><a href="#">支出</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-item">
+                                    <label class="label" for="">交易单号：</label>
+                                    <span class="ipt-box ipt-box"><input class="ipt" type="text"></span>
+                                </div>
+                            
+                                <div class="form-item">
+                                    <label class="label" for="">商户单号：</label>
+                                    <span class="ipt-box ipt-box"><input class="ipt" type="text"></span>  
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <label class="label" for="">入账金额：</label>
+                                <span class="ipt-box mini-ipt-box"><input class="ipt" type="text"></span> - <span class="ipt-box mini-ipt-box"><input class="ipt" type="text"></span>元
+                            </div>
+                            <div class="form-item form-btn"><a class="btn btn-primary" href="#">查询</a></div>
+                        </div>
+                        <div class="query-result">
+                            <div class="tab-subnav on"><a href="#">查询结果</a></div>
+                            <div class="tab-subcon">
+                                <div class="tips-guide clr">
+                                    <div class="fl">
+                                        <h2>微信用户一览</h2>
+                                    </div>
+                                    <div class="fr">
+                                        <div><!--没有修改权限时给a加类class="gray"-->
+                                        	<a name="productsUpdate" class="btn btn-default hide" href="#">同步更新</a>
+                                            <a name="productsExport" class="btn btn-primary hide" href="#">批量导出</a>
+                                            <a name="productsDelete" class="btn btn-danger hide" href="#">批量删除</a>
+                                            <a name="productsConfirm" class="btn btn-primary hide" href="#">确定删除</a>
+                                           	<a name="productsSave" class="btn btn-primary hide" href="#">保存</a>
+                                            <a name="productsCancel" class="btn btn-danger hide" href="#">取消</a>
+                                        </div>
+                                    </div>
+                                 </div>
+                                <div class="table-list table-stat">
+                                    <table class="table">
+                                        <colgroup>
+                                            <col class="c1"></col>
+                                            <col class="c2"></col>
+                                            <col class="c3"></col>
+                                            <col class="c4"></col>
+                                            <col class="c5"></col>
+                                            <col class="c6"></col>
+                                            <col class="c7"></col>
+                                            <col class="c8"></col>
+                                            <col class="c9"></col>
+                                        </colgroup>
+                                        <tr>
+                                            <th>行号</th>
+                                            <th>头像</th>
+                                            <th>昵称</th>
+                                            <th>归属公众号</th>
+                                            <th>城市</th>
+                                            <th>是否跑路</th>
+                                            <th>最后上线时间</th>
+                                            <th>最后回复时间</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        <tbody id="result"></tbody>     
+                                        <tr class="hide">
+                                            <td>2014-08-11 10:01:10</td>
+                                                                                    <td><a href="#">查看</a>
+                                              <a href="#" class="gray">审核<div class="popup popup-right">
+    <p>开通商户号时系统会默认会为您生成初始的API密码，您也可以在本页面对API密码进行修改。</p>
+    <span class="popup-arrow arrow-out"></span>
+    <span class="popup-arrow arrow-in"></span>
+</div>
+</a></td>
+                                            <td>1234567890123412345678901234</td>
+                                            <td>55792226668587772599</td>
+                                            <td>交易</td>
+                                            <td>收入</td>
+                                            <td><span class="red">- 0.01</span></td>
+                                            <td>100.01</td>
+                                            <td>哈哈</td>
+                                        </tr>
+                                        <tr id="no-order" class="empty">
+                                            <td colspan="9">无符合查询条件的结果数据</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                             </div>
+                                <div id="wechatMembershipPage" class="toolbar hide">
+                                    <div class="pagination wechatMembership_page" id="validpage">
+                                        <span class="page-area">
+                                        <a href="#" class="btn page-first">首页</a>
+                                        <a href="#" class="btn page-prev"><i class="ico-arrow"></i></a>
+                                        <span class="page-num">
+                                        	<label name="curpage"></label>
+                                        	<span class="num-gap">/</span>
+                                        	<label name="total_page"></label>
+                                        </span>
+                                        <a href="#" class="btn page-next"><i class="ico-arrow"></i></a>
+                                        <a href="#" class="btn page-last">尾页</a>           
+                                        </span>
+                                        <span class="goto-area">
+                                        	<input name="pageno" type="text">
+                                        	<a href="#" class="btn page-go">跳转</a>
+                                        </span>
+                                    </div>
+                                </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+<!-- 主区域 E -->
+</div>
+
+</div>
+<!-- 内容 E -->
+
+<!--尾部S-->
+<?php require_once("/template/footer.shtml"); ?>
+<!--尾部E-->
+
+</body>
+
+<script id="wechatmembershiplist" type="text/html">
+{{if isAdmin}}
+	{{each list as value i}}
+	<tr>
+		<td>{{value[0]}}</td>
+		<td>
+			<a class="example-image-link" href="<?=base_url("/static/img/fans/{{value[1]}}")?>" data-lightbox="example-1">
+				<img style="width:100%;" src="<?=base_url("/static/img/fans/{{value[1]}}")?>" />
+			</a>
+		</td>
+		<td>{{value[2]}}</td>
+		<td>{{value[3]}}</td>
+		<td>{{value[4]}}</td>
+		<td>{{value[5]}}</td>
+		<td><span class="green">{{value[6]}}</span></td>
+		<td><span class="red">{{value[7]}}</span></td>
+		<td><a href="http://localhost/WeStoreOperation/index.php/westore/westoreContact?sender=<?php echo $this->input->cookie('userNo'); ?>&getter={{value[8]}}" target="_blank">回复</a></td>
+	</tr>
+	{{/each}}
+{{/if}}
+</script>
+
+<script type="text/javascript" src="<?=base_url("/static/js/lightbox.min.js")?>"></script>
+<script type="text/javascript" src="<?=base_url("/static/js/westore/membership/westore.wechat.membership.js")?>"></script>
+</html>
